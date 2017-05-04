@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="加意新品(jiae.com)是一种创意的生活方式，让每个人享受设计的乐趣，每天加一点创意。 对于消费者，你可以抢鲜购买到原创的设计精品，也可以找到设计师为你提供专属的创意设计服务。 对于设计师，你可以免费发布设计新品和设计服务，帮助你自由实现设计梦想。">
+    <meta name="keywords" content="创意电商、新品电商、创意产品、创意家居、创意设计、创意礼物、创意生活、设计师、极客">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <title>订单结算</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="shortcut icon" href="../assets/i/favicon.ico">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="../assets/i/app-icon72x72@2x.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="../assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href="../assets/css/public.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+</head>
+
+<body style="background-color: #f9f9f9;" class="am-with-fixed-header am-with-fixed-navbar">
+    <div ng-view id="myAPP"></div>
+    <!--底部-->
+    <!--<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+        <ul id="container" class="am-navbar-nav am-cf am-avg-sm-4" style="background-color:#fff;" id="J-footer-menu">
+            <li>
+                <a href="#/home" class="" id="home">
+                    <span id="homeIcon" class="am-icon-home footerTitleMiao footerTitleMiaoActive headIcon"></span>
+                    <span id="homeTitle" class="am-navbar-label footerTitleFont footerTitleFontActive headTitle">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="#/typelist" class="" id="typelist">
+                    <span id="typelistIcon" class="am-icon-bars footerTitleMiao headIcon"></span>
+                    <span id="typelistTitle" class="am-navbar-label footerTitleFont headTitle">分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="#/basket" class="" id="cart">
+                    <span id="cartIcon" class="am-icon-shopping-cart footerTitleMiao headIcon" style="position:relative;">
+                  <span class="am-badge am-badge-danger am-round" id="J-cart-num" 
+                  style="position: absolute;top: -.2rem;left: .8rem;color: #fff;border-radius: 1000px;-webkit-text-fill-color: #fff;-webkit-text-stroke-color: #fff;font-weight: 300;display:none;">
+                  0</span>
+                    </span>
+                    <span id="cartTitle" class="am-navbar-label footerTitleFont headTitle">购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="#/login" id="login">
+                    <!-- <a id="J-hd-btn-login" href="login"> -->
+                    <!--<span id="loginIcon" class="am-icon-user footerTitleMiao headIcon"></span>
+                    <span id="loginTitle" class="am-navbar-label footerTitleFont headTitle">登录</span>
+                </a>
+            </li>
+        </ul>-->
+<!--    </div>-->
+<!--订单结算头部-->
+   <header data-am-widget="header" class="am-header am-header-default am-header-fixed am-no-layout">
+   	<div class="am-header-left am-header-nav">
+   	  <a href="javascript:window.history.back();" class=""> 
+   	  	<img class="am-header-icon-custom" src="data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 12 20&quot;&gt;&lt;path d=&quot;M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z&quot; fill=&quot;%23fff&quot;/&gt;&lt;/svg&gt;" alt="">
+	  </a>
+   	</div>
+   	<h1 class="am-header-title">
+   	  <a href="#" class="">订单结算</a>
+   	</h1>
+   	<div class="am-header-right am-header-nav">
+   	  <a href="myaccount?target=orderlist?pageNo=1" class="j-my-cog">
+   	  	<i class="am-header-icon am-icon-cog"></i>
+   	  </a>
+   	</div>
+   </header>
+<!--收货人信息-->
+   <section data-am-widget="accordion" class="am-accordion am-accordion-gapped am-order-conone am-no-layout" data-am-accordion="{  }">
+        <div class="am-accordion-item" style="margin:0;border-bottom: 3px solid transparent;border-image: 3 repeating-linear-gradient(-45deg, #fd9a9b 0, #fd9a9b .5em, transparent 0, transparent 1em, #fd9a9b 0, #fd9a9b 1.5em, transparent 0, transparent 2em);">
+              
+                <a href="" class="list-group-item" id="normal-address" style="display:block;">  
+	                <dt class="am-accordion-title">
+	                	<i class="am-icon-map-marker" style="-webkit-text-stroke:1.5px black;-moz-text-stroke:1px #fff;color:transparent;font-size:2rem;"></i>  请填写收货人信息
+	                </dt>
+                </a>
+                <a class="list-group-item" id="wx-address" style="display:none;">  
+	                <dt class="am-accordion-title">
+	                	<i class="am-icon-map-marker" style="-webkit-text-stroke:1.5px black;-moz-text-stroke:1px #fff;color:transparent;font-size:2rem;"></i>  获取微信收货地址
+	                </dt>
+                </a>
+            
+            <dd class="am-accordion-bd am-collapse">
+            </dd>          
+        </div>
+   </section>
+   <div class="j-divider"></div>
+<!--商品栏-->
+	<style type="text/css">
+		/* Write your styles */
+		.j-divider{
+			height:10px;
+			border-top:1px solid #E5E5E5;
+			border-bottom:1px solid #E5E5E5;
+		}
+		.am-order-conone .am-order-conDiv01 input{
+			padding-left:10px;
+		}
+		.am-order-conone{
+			background:#fff;
+			margin:0;
+		}
+		.am-order-conone .am-accordion-title, .am-order-conone .am-accordion-item{
+			border:none;
+		}
+		.am-order-conone .am-list>li{
+			border:0;
+		}
+		.am-list>li{
+			position:relative;
+			display:block;
+			margin-bottom:-1px;
+			background-color:#fff;
+		}
+		.am-order-conone .am-order-listp01{
+			display:inline-block;
+			margin-top:10px;
+			color:#adadad;
+		}
+		.am-order-conone .am-order-listp01 span{
+			color:#666;
+			font-size:16px;
+		}
+		.am-order-conone a{
+			color:#666;
+		}
+		.am-list-news-default .am-list .am-list-item-desced{
+			padding-top:1rem;
+			padding-bottom:1rem;
+		}
+		form{
+			display:block;
+			margin-top:0em;
+		}
+		.am-order-conone .am-order-conDiv01 {
+			margin-left:10px;
+			border-bottom:1px solid #E5E5E5;
+			height:40px;
+			line-height:40px;
+			padding:5px 0;
+		}
+		.am-order-conone .am-order-conDiv01 span{
+			line-height:30px;
+			float:left;
+		}
+		.am-order-conone .am-order-conDiv01 input{
+			padding-left:10px;
+		}
+		#vselect{
+		    -webkit-appearance:none;
+		    background:url(../i/下载.png) no-repeat scroll right center transparent;
+		    background-size: 25px 11px;
+		}
+		.am-order-conone .am-order-conDiv01 .am-order-btngroup select{
+			width:100%;
+			height:30px;
+			line-height:30px;
+			color:#666;
+			border:0;
+			font-size:1.4rem;
+		}
+		.am-order-conone .am-order-conDiv01 .am-order-btncenter{
+			width:50%;
+			float:left;
+			margin-left:12px;
+			border:1px solid #CDCDCD;
+			border-radius:3px;
+			font-size:1.4rem;
+		}
+		.am-order-conone .am-order-conDiv01 .am-order-btnright{
+			float:right;
+			height:30px;
+			width:25%;
+			background:#E25A5B;
+			color:#fff;
+			text-align:center;
+			line-height:30px;
+			margin-right:10px;
+		}
+		.am-order-conone .am-order-conDiv01 button{
+			border:none;
+		}
+		.am-order-btngroup{
+			position:relative;
+			overflow:hidden;
+			height:30px;
+			line-height:30px;
+			margin-left:60px;
+			color:#666;
+		}
+		.j-my-point{
+			float:right!important;
+			margin-right:10px;
+		}
+		.am-order-conone .am-order-textareaDiv{
+			margin:0;
+			padding:5px 10px;
+		}
+		.am-order-conone .am-order-textareaDiv textarea{
+			width:100%;
+			padding-left:5px;
+			border:1px solid #e0e0e0;
+			border-radius:5px;
+			font-size:1.4rem;
+		}
+		.am-order-conone .am-order-conul01{
+			padding:0 10px;
+			color:#626262;
+		}
+		.am-order-conul01{
+			border-bottom:1px solid #E5E5E5;
+			margin-bottom:60px;
+		}
+		.am-order-conone .am-order-conul01 li{
+			clear:both;
+		    display:block;
+		    overflow:hidden;
+		    height:25px;
+		    line-height:25px;
+		}
+		.am-order-conone .am-order-conul01 li span{
+			color:#e25a5b;
+		}
+		.j-float-left{
+		    display:block;
+		    float:left;
+		    color:#333!important;
+		}
+		.j-float-right{
+			display:block;
+			float:right;
+		}
+		strong{
+		    font-weight:normal!important;
+		}
+		.am-u-sm-12{
+			width:100%;
+		}
+		.j-checkout-footer{
+			padding-right:0;
+			background:#fff;
+			height:49px;
+			line-height:49px;
+			border-top:1px solid #E5E5E5;
+		}
+		.j-total{
+			float:left;
+		}
+		.j-checkout-btn{
+			float:right;
+			width:auto;
+			padding:0 10px;
+			height:49px;
+			line-height:49px;
+		}
+		.j-checkout-div{
+			position:fixed;
+			bottom:0;
+		}
+		.am-order-conone .am-order-conDiv01 .am-order-btngroup, .am-order-conone .am-order-conDiv01 .am-order-btncenter{
+			height:30px;
+			line-height:30px;
+			color:#666;
+		}
+		/*遮罩层*/
+		.am-modal{
+			width:270px;
+			position:fixed;
+			left:50%;
+			top:50%;
+			margin-top:0;
+			margin-left:-135px;
+			text-align:center;
+			border-radius:0;
+			display:none;
+			z-index:1110;
+			perspective:1000px;
+		}
+		.am-modal1{
+			position:absolute;
+			top:0;
+			left:0;
+			background-color:rgba(0,0,0,.6);
+		}
+
+	</style>
+   <div id="J-checkout-group">
+   	<div data-am-widget="list_news" class="am-list-news am-list-news-default am-order-conone am-no-layout" style="padding:0 10px;">
+   	  <div class="am-list-news-bd">
+   	  	<ul class="am-list" style="margin:0;">
+   	  		<li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
+   	  		   <div class="am-u-sm-4">
+   	  		   	 <a href="productdetail?productId=1012452" class="">
+   	  		   	   <img class="am-img-responsive lazy" src="../assets/i/shoping-img/l1/1/l111.jpg" alt="竹语生肖系列鸡年纪念款( 鸡年纪念款（送竹皮笔记本）)">
+   	  		   	 </a>
+   	  		   </div>
+   	  		   <div class="am-u-sm-8 am-list-main" style="position:relative;">
+   	  		   	<h3 class="am-list-item-hd">
+   	  		   	  <a href="###" class="am-order-lista01">竹语生肖系列鸡年纪念款( 鸡年纪念款（送竹皮笔记本）)</a>
+   	  		   	  <br>
+   	  		   	  <a href="###" class="am-order-lista02"></a>
+   	  		   	</h3>
+   	  		    <div class="am-list-item-text" style="margin-top:0;">
+		                            <p class="am-order-listp01"><span class="numSpan">1</span>&nbsp;件</p>&nbsp;&nbsp;
+		                            
+		        </div>
+   	  		   	<p style="position:absolute;top:50%;margin-top:-.8rem;right:0;color:#ea5a60;font-size:2rem;font-weight:600;">¥<span>299.00</span></p>
+   	  		   </div>
+   	  		</li>
+   	  	</ul>
+   	  </div>
+    </div>
+   </div>
+   <div class="j-divider"></div>
+<!--优惠券-->  
+   <div id="J-template-div">
+   	<div data-am-widget="list_news" class="am-list-news am-list-news-default am-order-conone am-no-layout" style="clear:both;">
+   		<div class="am-btn-groupDiv">
+   			<div class="am-order-conDiv01">
+   				<span>优惠券</span>
+   				<div class="am-order-btngroup">
+   				   <form action="calculatecoupon" method="post" id="J-selCoupon-form">
+   				   	<input id="J-id-num" name="num" type="hidden">
+   				   	<input id="J-id-opType2" name="opType" type="hidden" value="1">
+   				   	<select id="vselect" onchange="">
+   				   	  <option id="addim" value="0" name="请选择_0">请选择</option>
+   				   	</select>
+   				   </form>
+   				</div>
+   			</div>
+<!--兑换券-->
+   			<div class="am-order-conDiv01">
+   				<form action="javascript:void(0)" method="post" id="J-exchange-form">
+   					<input id="id_opType" name="opType" type="hidden" value="2">
+   					<span>兑换券</span>
+   					<input id="id_fcode" class="am-order-btncenter" placeholder="请输入兑换码" onfocus="if(value=='请输入兑换码'){value=''}" onblur="if(value==''){value='请输入兑换码'}">
+   					<button class="am-order-btnright" id="J-btn-exchange">兑换</button>
+   				</form>
+   			</div>
+<!--加意分-->
+   			<div class="am-order-conDiv01">
+   				<span>加意分</span>
+   				<input id="J_PointInput" class="am-order-btncenter" style="width:120px;" placeholder="输入使用积分">
+   				<span class="am-text-xs j-my-point">可用积分:0分</span>
+   			</div>
+<!--评论-->
+   			<div class="j-comment am-order-textareaDiv">
+   				<textarea class="" rows="2" placeholder="备注(最多60个文字)" maxlength="60"></textarea>
+   			</div>
+   			<div style="font-size:10px;color:#666;line-height:15px;padding:5px;text-align:center;">如需开具发票，请在签收商品后致电4000-999-637，或发邮件至service@jiae.com索取。</div>
+   		</div>
+   	</div>
+    <div class="j-divider"></div>
+<!--总金额-->
+    <div data-am-widget="list_news" class="am-list-news am-list-news-default am-order-conone am-no-layout">
+    	<ul class="am-order-conul01">
+    		<li>
+    		  <span class="j-float-left">合计金额</span>
+    		  <span class="j-float-right">¥299.00</span>
+    		</li>
+    		<li>
+    		  <span class="j-float-left">优惠</span>
+    		  <span class="j-float-right">-¥0.00</span>
+    		</li>
+    		<li>
+    		  <span class="j-float-left">运费</span>
+    		  <span class="j-float-right">¥0.00</span>
+    		</li>
+    		<li><span class="j-float-left">积分抵扣</span><span id="charge_excl_tax" class="j-float-right">-¥<strong id="J_Discharge">0.00</strong></span></li>
+    	</ul>
+    </div>
+<!--需要支付的总额尾部-->
+    <div class="am-g j-checkout-div">
+    	<div class="am-u-sm-12 j-checkout-footer">
+		   	  <div class="am-order-lastli j-total">您共需支付：<span style="color:#e25a5b;">¥<span id="total_incl_discounts">299.00</span></span></div>
+		      <button class="am-btn am-btn-block am-btn-danger am-radius j-checkout-btn" id="J-btn-ordering">提交订单</button>
+		</div>
+     </div>
+    </div>
+   </div>
+<!--点击提交订单的遮罩层-->
+	<div class="am-modal am-modal-alert am-modal-active" tabindex="-1" id="jiae-alert">
+	  <div class="am-modal-dialog">
+	    <div class="am-modal-hd">消息</div>
+	    <div class="am-modal-bd" id="alertMsg">请选择收货地址!</div>
+	    <div class="am-modal-footer">
+	      <span class="am-modal-btn">确定</span>
+	    </div>
+	  </div>
+	</div>
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/amazeui.min.js"></script>
+   <script src="../assets/js/main.js"></script>
+</body>
+<script type="text/javascript">
+	var $tan1=$('#jiae-alert');
+    var w = $(window).width();var h = $(window).height();
+$('#J-btn-ordering').click(function(){
+	$tan1.css({
+		}).show();
+		$('<div class="am-modal1"></div>').css({
+			'width':w,'height':h
+		}).appendTo('body');
+	});
+	$('.am-modal-btn').click(function(){
+		$tan1.hide();
+		$('.am-modal1').hide();
+	});
+</script>
+</html>

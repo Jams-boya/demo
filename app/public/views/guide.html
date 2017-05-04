@@ -1,0 +1,293 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="加意新品(jiae.com)是一种创意的生活方式，让每个人享受设计的乐趣，每天加一点创意。 对于消费者，你可以抢鲜购买到原创的设计精品，也可以找到设计师为你提供专属的创意设计服务。 对于设计师，你可以免费发布设计新品和设计服务，帮助你自由实现设计梦想。">
+    <meta name="keywords" content="创意电商、新品电商、创意产品、创意家居、创意设计、创意礼物、创意生活、设计师、极客">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <title>加意新品</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="shortcut icon" href="../assets/i/favicon.ico">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="../assets/i/app-icon72x72@2x.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="../assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="../assets/css/public.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+</head>
+
+<body style="background-color: white; " class="am-with-fixed-header  am-with-fixed-navbar">
+    <div ng-view id="myAPP"></div>
+    <!--底部-->
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+        <ul id="container" class="am-navbar-nav am-cf am-avg-sm-4" style="background-color:#fff;" id="J-footer-menu">
+            <li>
+                <a href="index.html" class="" id="home">
+                    <span id="homeIcon" class="am-icon-home footerTitleMiao  headIcon"></span>
+                    <span id="homeTitle" class="am-navbar-label footerTitleFont  headTitle">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="catalog.html" class="" id="typelist">
+                    <span id="typelistIcon" class="am-icon-bars footerTitleMiao headIcon"></span>
+                    <span id="typelistTitle" class="am-navbar-label footerTitleFont headTitle">分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="shopcar.html" class="" id="cart">
+                    <span id="cartIcon" class="am-icon-shopping-cart footerTitleMiao headIcon" style="position:relative;">
+                  <span class="am-badge am-badge-danger am-round" id="J-cart-num" 
+                  style="position: absolute;top: -.2rem;left: .8rem;color: #fff;border-radius: 1000px;-webkit-text-fill-color: #fff;-webkit-text-stroke-color: #fff;font-weight: 300;display:none;">
+                  0</span>
+                    </span>
+                    <span id="cartTitle" class="am-navbar-label footerTitleFont headTitle">购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="login.html" id="login">
+                    <!-- <a id="J-hd-btn-login" href="login"> -->
+                    <span id="loginIcon" class="am-icon-user footerTitleMiao headIcon"></span>
+                    <span id="loginTitle" class="am-navbar-label footerTitleFont headTitle">登录</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--在这里编写你的代码-->
+    <!--头部开始-->
+    <style type="text/css">
+    	.link{
+    		display: block;
+    	}
+    </style>
+    <header data-am-widget="header" class="am-header am-header-fixed  am-header-default am-no-layout">
+    	<div class="am-header-left am-header-nav">
+    		<a href="javascript:window.history.back();" class>
+    			<img class="am-header-icon-custom" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMiAyMCI+PHBhdGggZD0iTTEwLDBsMiwybC04LDhsOCw4bC0yLDJMMCwxMEwxMCwweiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg=="/>
+    		</a>
+    	</div>
+    	<h1 class="am-header-title">
+    		<a href="#" class="pagename">加意新品</a>
+    	</h1>
+    	<div class="am-header-right am-header-nav">
+    		<a href="javascript:;" id="link">
+    			<i class="am-header-icon am-icon-cog "></i>
+    		</a>
+    	</div>
+    </header>
+    <!--头部结束-->
+    <style type="text/css">
+    	.img{
+    		height: 100%;
+    		width: 100%;
+    	}
+    	.am-tabs{
+    		overflow: hidden;
+    		background: white;
+    	}
+    	.am-jiaecoo-left{
+    		background: #efefef;
+    		float: left;
+    		margin-top: 10px;
+    		width: 35%;
+    	}
+    	.am-jiaecoo-left>li{
+    		width: 100%;
+    		height: 5rem;
+    		/*text-align:center;*/
+    		text-indent: 1.2rem;
+    		line-height: 5rem;
+    		color: #e74144;
+    		font-size: 1.4rem;
+    		box-sizing: border-box;
+    		border-bottom: 1px solid white;
+    	}
+    	.am-jiaecoo-left>li.red{
+    		background: #e74144 ;
+    		color: white;
+    	}
+    	.am-jiaecoo-right{
+    		float: right;
+    		width: 65%;
+    		margin-top: 10px;
+    		padding:5px 10px ;
+    		overflow: hidden;
+    	}
+    	.am-jiaecoo-right>.ulbox>ul>li{
+    		width: 100%;
+    		height: 5rem;
+    		border: 1px solid #CCCCCC;
+    		border-radius: 5px;
+    		box-sizing: border-box;
+    	}
+    	.am-jiaecoo-right>.ulbox>ul>li>a{
+    		display: block;
+    		height: 100%;
+    		padding: 0.5rem 0;
+    	}
+    	.am-jiaecoo-right>.ulbox>ul>li>a>p{
+    		text-align:center;
+    		color: #333;
+    		font-size: 1.3rem;
+    		line-height: 3.8rem;
+    		margin: 0;
+    	}
+    	.am-jiaecoo-right>.ulbox>ul>li>a>p>i{
+    		color: #0ec36f;
+    		font-size: 25px;
+    	}
+    	.am-jiaecoo-right>.ulbox{
+    		width: 30000px;
+    		height: 100%;
+    		overflow: hidden;
+    		margin-left: -0.5rem;
+    	} 
+    	.am-jiaecoo-right>.ulbox>ul{
+    		float: left;
+    		width: 19rem;
+    		margin: 0 1.05rem ;
+    	}
+    </style>
+    <!--加意指南页面头部图片-->
+	<img src="../assets/i/newgood.jpg" class="img"/>
+	<!--下方部分框-->
+	<div class="am-tabs">
+		<!--左侧表-->
+		<ul class="am-tabs-nav am-nav am-nav-ver am-jiaecoo-left">
+			<li>新手指南</li>
+			<li>配送与支付</li>
+			<li>售后服务</li>
+			<li>关于加意</li>
+		</ul>
+		<!--右侧显示部分-->
+		<div class="am-tab-panel am-active am-jiaecoo-right">
+			<div class="ulbox" id="linkchange">
+				<!--新手指南-->
+	            <ul class="am-nav guide">
+	            	<li>
+	            		<a href="guide_01.html">
+	            			<p><i class="am-icon-shopping-bag"></i>&nbsp;&nbsp;&nbsp;&nbsp;购物流程</p>
+	            		</a>
+	            	</li>
+	            	<li>
+	            		<a href="guide_02.html">
+	            			<p><i class="am-icon-headphones" style="color: #3577d2;"></i>&nbsp;&nbsp;&nbsp;&nbsp;联系客服</p>
+	            		</a>
+	            	</li>
+	            	<li>
+	            		<a href="guide_03.html">
+	            			<p><i class="am-icon-tags" style="color:#ee9ee3;"></i>&nbsp;&nbsp;&nbsp;&nbsp;用户协议</p>
+	            		</a>
+	            	</li>
+	            </ul>
+	            <!--配送与支付-->
+	            <ul class="am-nav pay">
+	            	<li>
+	            		<a href="guide_04.html">
+	            			<p><i class="am-icon-clock-o" style="color: #34bef6;"></i>&nbsp;&nbsp;&nbsp;&nbsp;配送时间及范围</p>
+	            		</a>
+	            	</li>
+	            	<li>
+	            		<a href="guide_05.html">
+	            			<p><i class="am-icon-money" style="color: #fdc904;"></i>&nbsp;&nbsp;&nbsp;&nbsp;配送收费标准</p>
+	            		</a>
+	            	</li>
+	            	<li>
+	            		<a href="guide_06.html">
+	            			<p><i class="am-icon-credit-card" style="color: #333b8e;"></i>&nbsp;&nbsp;&nbsp;&nbsp;支付方式</p>
+	            		</a>
+	            	</li>
+	            </ul>
+	            <!--售后服务-->
+	            <ul class="am-nav service" >
+	            	<li>
+	            		<a href="guide_07.html">
+	            			<p><i class="am-icon-file-text" style="color: #9e7915;"></i>&nbsp;&nbsp;&nbsp;&nbsp;验货和拒收政策</p>
+	            		</a>
+	            	</li>
+	            	<li>
+	            		<a href="guide_08.html">
+	            			<p><i class="am-icon-calendar-times-o" style="color: #fb565a;"></i>&nbsp;&nbsp;三十天无理由退换货</p>
+	            		</a>
+	            	</li>
+	            	<li>
+	            		<a href="guide_09.html">
+	            			<p><i class="am-icon-exchange" style="color: #058fd6;"></i>&nbsp;&nbsp;&nbsp;&nbsp;退换货及退款流程</p>
+	            		</a>
+	            	</li>
+	            </ul>
+	            <!--关于加意-->
+	            <ul class="am-nav aboutjiae">
+	            	<li>
+	            		<a href="guide_10.html">
+							<p><i class="am-icon-paper-plane" style="color: #5efdf3;"></i>&nbsp;&nbsp;&nbsp;&nbsp;了解加意</p>	            		
+	            		</a>
+	            	</li>
+	            	<li>
+	            		<a href="guide_11.html">
+	            			<p><i class="am-icon-history" style="color: #22dd65;"></i>&nbsp;&nbsp;&nbsp;&nbsp;发展历程</p>
+	            		</a>
+	            	</li>
+	            	<li>
+	            		<a href="guide_12.html">
+	            			<p><i class="am-icon-newspaper-o" style="color: #1563bf;"></i>&nbsp;&nbsp;&nbsp;&nbsp;新闻报道</p>
+	            		</a>
+	            	</li>
+	            	<li>
+	            		<a href="guide_13.html">
+	            			<p><i class="am-icon-user-plus" style="color: #ff0000;"></i>&nbsp;&nbsp;&nbsp;&nbsp;加入加意</p>
+	            		</a>
+	            	</li>
+	            	<li>
+	            		<a href="guide_14.html">
+	            			<p><i class="am-icon-group" style="color: #1e9ced;"></i>&nbsp;&nbsp;&nbsp;&nbsp;商务合作</p>
+	            		</a>
+	            	</li>
+	            </ul>
+			</div>
+        </div>
+	</div>
+	
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/amazeui.min.js"></script>
+   <script src="../assets/js/jquery.touch.js" type="text/javascript" charset="utf-8"></script>
+   <script src="../assets/js/main.js"></script>
+</body>
+<script type="text/javascript">
+//	简易选项卡
+var idget=location.search.split("=")[1];
+$("#link").attr("href","presonalcenter.html?user="+idget);
+	$(".am-jiaecoo-left>li").eq(0).addClass("red");
+	$(".am-jiaecoo-left>li").on("tap",function () {
+		$(this).addClass("red").siblings().removeClass("red");
+		$(".ulbox").animate({
+			"margin-left":-$(this).index()*21+"rem"
+		},300);
+	});
+	$("#linkchange").find("a").eq(0).attr("href","guide/guide_01.html?user="+idget);
+	$("#linkchange").find("a").eq(1).attr("href","guide/guide_02.html?user="+idget);
+	$("#linkchange").find("a").eq(2).attr("href","guide/guide_03.html?user="+idget);
+	$("#linkchange").find("a").eq(3).attr("href","guide/guide_04.html?user="+idget);
+	$("#linkchange").find("a").eq(4).attr("href","guide/guide_05.html?user="+idget);
+	$("#linkchange").find("a").eq(5).attr("href","guide/guide_06.html?user="+idget);
+	$("#linkchange").find("a").eq(6).attr("href","guide/guide_07.html?user="+idget);
+	$("#linkchange").find("a").eq(7).attr("href","guide/guide_08.html?user="+idget);
+	$("#linkchange").find("a").eq(8).attr("href","guide/guide_09.html?user="+idget);
+	$("#linkchange").find("a").eq(9).attr("href","guide/guide_10.html?user="+idget);
+	$("#linkchange").find("a").eq(10).attr("href","guide/guide_11.html?user="+idget);
+	$("#linkchange").find("a").eq(11).attr("href","guide/guide_12.html?user="+idget);
+	$("#linkchange").find("a").eq(12).attr("href","guide/guide_13.html?user="+idget);
+	$("#linkchange").find("a").eq(13).attr("href","guide/guide_14.html?user="+idget);
+</script>
+</html>

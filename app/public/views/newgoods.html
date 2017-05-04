@@ -1,0 +1,340 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="加意新品(jiae.com)是一种创意的生活方式，让每个人享受设计的乐趣，每天加一点创意。 对于消费者，你可以抢鲜购买到原创的设计精品，也可以找到设计师为你提供专属的创意设计服务。 对于设计师，你可以免费发布设计新品和设计服务，帮助你自由实现设计梦想。">
+		<meta name="keywords" content="创意电商、新品电商、创意产品、创意家居、创意设计、创意礼物、创意生活、设计师、极客">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+		<title>加意新品</title>
+		<!-- Set render engine for 360 browser -->
+		<meta name="renderer" content="webkit">
+		<!-- No Baidu Siteapp-->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<link rel="shortcut icon" href="../assets/i/favicon.ico">
+		<!-- Add to homescreen for Chrome on Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="icon" sizes="192x192" href="../assets/i/app-icon72x72@2x.png">
+		<!-- Add to homescreen for Safari on iOS -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+		<link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+		<!-- Tile icon for Win8 (144x144 + tile color) -->
+		<meta name="msapplication-TileImage" content="../assets/i/app-icon72x72@2x.png">
+		<meta name="msapplication-TileColor" content="#0e90d2">
+		<link rel="stylesheet" href="../assets/css/amazeui.min.css">
+		<link rel="stylesheet" href="../assets/css/app.css">
+		<link rel="stylesheet" href="../assets/css/public.css">
+		<link rel="stylesheet" href="../assets/css/home.css">
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/amazeui.min.js"></script>
+		<script src="../assets/js/main.js"></script>
+	</head>
+
+	<body style="background-color: #fff;" class="am-with-fixed-header am-with-fixed-navbar">
+		<div ng-view id="myAPP"></div>
+		<!--底部-->
+		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+			<ul id="container" class="am-navbar-nav am-cf am-avg-sm-4" style="background-color:#fff;" id="J-footer-menu">
+				<li>
+					<a href="index.html" class="" id="home">
+						<span id="homeIcon" class="am-icon-home footerTitleMiao headIcon"></span>
+						<span id="homeTitle" class="am-navbar-label footerTitleFont headTitle">首页</span>
+					</a>
+				</li>
+				<li>
+					<a href="catalog.html" class="" id="typelist">
+						<span id="typelistIcon" class="am-icon-bars footerTitleMiao headIcon"></span>
+						<span id="typelistTitle" class="am-navbar-label footerTitleFont headTitle">分类</span>
+					</a>
+				</li>
+				<li>
+					<a href="shopcar.html" class="" id="cart">
+						<span id="cartIcon" class="am-icon-shopping-cart footerTitleMiao headIcon" style="position:relative;">
+                  <span class="am-badge am-badge-danger am-round" id="J-cart-num" 
+                  style="position: absolute;top: -.2rem;left: .8rem;color: #fff;border-radius: 1000px;-webkit-text-fill-color: #fff;-webkit-text-stroke-color: #fff;font-weight: 300;display:none;">
+                  0</span>
+						</span>
+						<span id="cartTitle" class="am-navbar-label footerTitleFont headTitle">购物车</span>
+					</a>
+				</li>
+				<li>
+					<a href="login.html" id="login">
+						<!-- <a id="J-hd-btn-login" href="login"> -->
+						<span id="loginIcon" class="am-icon-user footerTitleMiao headIcon"></span>
+						<span id="loginTitle" class="am-navbar-label footerTitleFont headTitle">登录</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--在这里编写你的代码-->
+		<style type="text/css">
+			.row{overflow: hidden;}
+			.row>h2{margin:0;font-size: 1.8em;height: 40px;line-height: 45px;text-align: center;font-weight: bold;letter-spacing: 5px;word-spacing: 5px;color:#666;margin-bottom: 5px;}
+			.row>.mg{width: 33.33333333333333%;padding: 2px;float: left;margin-bottom: 3px !important;border: none;background: transparent !important;}
+			.mg>img{width: 100%;height: 100%;}
+			.container{margin-left: auto;margin-right: auto;padding-left: 5px;padding-right: 5px;}
+			.j-new>h2{text-align: left;font-size: 20px !important;margin-bottom: 2px !important;}
+			b{color: #f77c7f;}
+			.j-early-time-icon {
+			    width: 30px;
+			    height: 30px;
+			}
+			.thumbnail {
+			    display: block;
+			    padding: 4px;
+			}
+			.cc,.cp{float: left;}
+			.col-xs-4 {
+			    width: 33.33333333%;
+			}
+			.j-item-img{
+				width: 100%;
+			}
+			.item-tit, .item-price {
+			    font-size: 0.8em;
+			    margin: 0;
+			    color: #333;
+			    font-weight: 400;
+			}
+			.item-price {
+			    margin-top: -5px;
+			    font-size: 0.8em;
+			    color: #f5422a;
+			}
+			.item-titlik p {
+			    width: 100%;
+			    float: none;
+			    margin: 0;
+			    text-align: left;
+			    margin-top: -5px;
+			    font-size: 0.6em;
+			}
+			.j-white-color {
+				display: block;
+				float: right;
+				width: 100%;
+			    padding: 2px 5px;
+			    cursor: pointer;
+				position: absolute;
+				bottom: 0;left: 0;
+				text-align: center;
+			    color: #ffffff;
+			    background: rgba(0,0,0,0.3)!important;
+			    display: block!important;
+			    font-size: 0.9em;
+			}
+			.j-week-caption-div {
+			    padding: 0 0 5px;
+			    position: relative;
+			    overflow: hidden;
+			    max-width: 520px;
+			}
+			.w3{color: #333;}
+			.glyphicon-play:before {
+			    content: "\e072";
+			}
+		</style>
+		
+		<!--新品专区单独页面-->
+		<header class="am-header am-header-default am-header-fixed am-no-layout">
+			<div class="am-from-group am-header-title headerSerachDiv">
+				<input type="text" id="search" class="am-form-field am-input-sm headSearchInput keywords am-round" placeholder="快搜新品" value="小目只能护眼宝" onfocus="if(value=='小目只能护眼宝'){value=''}" onblur="if(value==''){value='小目只能护眼宝'}" style="border: none;width: 100%;padding: 5px;padding-left: 15px;" />
+				<a href="javascript:;" class="headSerchIcon btn-submit am-input-group-btn">
+					<i class="am-icon-search am-header-icon" style="line-height: 30px;height: 30px;overflow: hidden;">
+    				
+    			</i>
+				</a>
+			</div>
+		</header>
+		
+		<div class="j-new-arrivals" style="background-color: #f6f5f1;">
+			<!--内容头部-->
+			<div class="container">
+				<div class="row j-new-arrivals-row">
+					<h2 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 j-new-title">NEW ARRIVALS</h2>
+					<div class="mg">
+						<img src="../assets/i/--1.gif"/>
+					</div>
+					<div class="mg">
+						<img src="../assets/i/--2.gif"/>
+					</div>
+					<div class="mg">
+						<img src="../assets/i/--3.gif"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--最新一周上架的商品-->
+		<div id="pl" class="container">
+			<div class="row j-week-price-row j-new pc">
+				<!--标题-->
+				<h2 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 j-early-title j-balck-color j-align-left j-fontMM">
+					最近<b>一周</b>上架
+					<img src="../assets/i/btmrig.png" class="j-early-time-icon">
+				</h2>
+				<div class="cc col-xs-4 col-sm-4 col-md-3 col-lg-3 j-early-content">
+					<div class="thumbnail j-new-thumbnail">
+			          <div style="position:relative;"  class="ss" data-id="">
+			          	<a class="j-new-img-a" href="javascript:;">
+				          	<img class="j-item-img" alt="new arrivals" src="../assets/i/2.gif" style="overflow:hidden;">
+				          </a>
+				          <a class="j-btn-catalog j-gray-bg j-white-color j-moveDiv" style="display:none; text-align:center;" href="javascript:;" data-id="">加意新品
+					         <span class="glyphicon glyphicon-play"></span>
+					      </a>
+			          </div>
+			          <div class="caption j-early-caption">
+			          	<div class="j-week-caption-div">
+				          	<div class="item-titlik">
+						        <h3 class="item-tit">
+						            <a class="w3" href="javascript:;" title="忍者U盘">忍者U盘</a>
+						        </h3>
+						        <p class="pip">Bone•台湾</p>
+						    </div>
+						    <p class="item-price">
+								¥168.00
+						    </p>
+					    </div>
+			          </div>
+			        </div>
+				</div>
+			</div>
+		</div>
+		<!--最新月上架-->
+		<div id="pl" class="container">
+			<div class="row j-week-price-row j-new pps">
+				<h2 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 j-early-title j-balck-color j-align-left j-fontMM">
+					最近<b>一月</b>上架
+					<img src="../assets/i/btmrig.png" class="j-early-time-icon">
+				</h2>
+				<!--一月上架商品-->
+				<div class="cp col-xs-4 col-sm-4 col-md-3 col-lg-3 j-early-content">
+					<div class="thumbnail j-new-thumbnail">
+			          <div style="position:relative;" class="sp" data-id="">
+			          	<a class="j-new-img-a" href="javascript:;" >
+				          	<img class="j-item-img" alt="new arrivals" src="../assets/i/brand5.jpg" style="overflow:hidden;">
+				          </a>
+				          <a class="j-btn-catalog j-gray-bg j-white-color j-moveDiv" style="display:none; text-align:center;" href="javascript:;" data-id="">加意新品
+					         <span class="glyphicon glyphicon-play"></span>
+					      </a>
+			          </div>
+			          <div class="caption j-early-caption">
+			          	<div class="j-week-caption-div">
+				          	<div class="item-titlik">
+						        <h3 class="item-tit">
+						            <a class="w3" href="javascript:;" title="忍者U盘">个性台灯</a>
+						        </h3>
+						        <p class="pip">Bone•英国</p>
+						    </div>
+						    <p class="item-price">
+								¥208.00
+						    </p>
+					    </div>
+			          </div>
+			        </div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			//搜索
+			$('.btn-submit').click(function() {
+				location.href = "search.html";
+				localStorage.setItem("search", $('#search').val())
+				console.log($('#search').val());
+			});
+			var b = localStorage.getItem("search");
+			$('#search').text("搜索“" + b + "”的结果");
+			$('#typelist').click(function() {
+	            localStorage.removeItem("act");
+	            $('#catalog').children('li').eq(0).trigger('click');
+	       });
+	       //页面加载时添加
+	       $('body').ready(function(){
+			       	$.get("/goods_type_id", function(result) {
+			       		var mt = [], dy=[];
+			       		var data = new Date();
+			       		var mouth = data.getMonth();
+			       		var day = data.getDate();
+			       		//一周遍历添加商品
+			       		
+						$.each(result, function(index,item) {
+							
+						
+							var time=item.time.split('.');
+							if((time[1] == mouth) && (time[2]- day)<7){
+								mt.push($('.cc:first').clone(true));
+//								console.log(mt);
+								$('.sp').eq(index).attr('data-id',item.id);
+								$('.cc img').attr('src',"../assets/i/shoping-img/" + item.pic1 + ".jpg");
+								$('.cc .w3').text(item.title);
+								$('.cc .item-price').text("￥" + item.price + ".00");
+//								console.log(s.title);
+								
+							}
+							
+						});
+						
+						
+						
+						//一月遍历添加商品
+						for(var s of result){
+							var time=s.time.split('.');
+							if((mouth - time[1] == 0) && (time[2]>day)){
+								dy.push($('.cp').clone(true));
+								$('.cp img').attr('src',"../assets/i/shoping-img/" + s.pic1 + ".jpg");
+								$('.cp .w3').text(s.title);
+								$('.cp .item-price').text("￥" + s.price + ".00");
+//								console.log(s.title);
+							}
+						};
+						//传递一月和一周的具体商品数组长度
+						localStorage.setItem("yiyue", dy.length);
+						localStorage.setItem("pinpai", mt.length);
+						//循环遍历添加到指定区块
+						for (var s of mt) {
+							s.appendTo('.pc');
+							$('.sp').eq(s.index()).click(function(){
+				      		location.href="goods.html";
+				      		gdsid=s.id;
+				      		location.replace("/views/goods.html?gdsid=" + gdsid);
+				      	});
+						}
+						for (var s of dy) {
+							s.appendTo('.pps');	
+						}
+						$('.cc').eq(0).remove();
+						$('.cp').eq(0).remove();
+		            });
+		            //品牌获取name和country
+		            var b=[],pinpai = localStorage.getItem("pinpai");
+		            $.get("/brand", function(result) {
+		            	for(var h of result){
+		            		b.push(h.name + "•" + h.country);
+		            		
+	                   };
+	                   //添加内容里
+	                    for(var j = 0 ;j< pinpai;j++){
+	                    	$('.cc .pip').get(j).innerText = b[j];
+			       		};
+		            });
+		            
+		            //同上
+		             var l=[],yiyue = localStorage.getItem("yiyue");
+		            $.get("/brand", function(result) {
+		            	for(var h of result){
+		            		l.push(h.name + "•" + h.country);
+		            		
+	                  };
+	                    for(var j = 0 ;j< yiyue;j++){
+	                    	$('.cp .pip').eq(j).text(l[j]);
+			       		};
+		            });
+	            })
+		</script>
+		
+		
+	</body>
+
+</html>

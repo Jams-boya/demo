@@ -1,0 +1,287 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="加意新品(jiae.com)是一种创意的生活方式，让每个人享受设计的乐趣，每天加一点创意。 对于消费者，你可以抢鲜购买到原创的设计精品，也可以找到设计师为你提供专属的创意设计服务。 对于设计师，你可以免费发布设计新品和设计服务，帮助你自由实现设计梦想。">
+    <meta name="keywords" content="创意电商、新品电商、创意产品、创意家居、创意设计、创意礼物、创意生活、设计师、极客">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <title>加意新品</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="shortcut icon" href="../assets/i/favicon.ico">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="../assets/i/app-icon72x72@2x.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="../assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href="../assets/css/public.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/amazeui.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</head>
+
+<body style="background-color: #fff;" class="am-with-fixed-header am-with-fixed-navbar">
+    <div ng-view id="myAPP"></div>
+    <!--底部-->
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+        <ul id="container" class="am-navbar-nav am-cf am-avg-sm-4" style="background-color:#fff;" id="J-footer-menu">
+            <li>
+                <a href="index.html" class="" id="home">
+                    <span id="homeIcon" class="am-icon-home footerTitleMiao headIcon"></span>
+                    <span id="homeTitle" class="am-navbar-label footerTitleFont headTitle">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="" id="typelist">
+                    <span id="typelistIcon" class="am-icon-bars footerTitleMiao footerTitleMiaoActive headIcon"></span>
+                    <span id="typelistTitle" class="am-navbar-label footerTitleFont footerTitleFontActive headTitle">分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="shopcar.html" class="" id="cart">
+                    <span id="cartIcon" class="am-icon-shopping-cart footerTitleMiao headIcon" style="position:relative;">
+                  <span class="am-badge am-badge-danger am-round" id="J-cart-num" 
+                  style="position: absolute;top: -.2rem;left: .8rem;color: #fff;border-radius: 1000px;-webkit-text-fill-color: #fff;-webkit-text-stroke-color: #fff;font-weight: 300;display:none;">
+                  0</span>
+                    </span>
+                    <span id="cartTitle" class="am-navbar-label footerTitleFont headTitle">购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" id="login">
+                    <!-- <a id="J-hd-btn-login" href="login"> -->
+                    <span id="loginIcon" class="am-icon-user footerTitleMiao headIcon"></span>
+                    <span id="loginTitle" class="am-navbar-label footerTitleFont headTitle">登录</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--在这里编写你的代码-->
+    <header class="am-header am-header-default am-header-fixed am-no-layout">
+        <div class="am-from-group am-header-title headerSerachDiv">
+            <input type="text" id="search" class="am-form-field am-input-sm headSearchInput keywords am-round" placeholder="快搜新品" value="小目只能护眼宝" onfocus="if(value=='小目智能护眼宝'){value=''}" onblur="if(value==''){value='小目智能护眼宝'}" style="border: none;width: 100%;padding: 5px;padding-left: 15px;"
+            />
+            <a href="javascript:;" class="headSerchIcon btn-submit am-input-group-btn">
+                <i class="am-icon-search am-header-icon" style="line-height: 30px;height: 30px;overflow: hidden;">
+    				
+    			</i>
+            </a>
+        </div>
+    </header>
+    <!--搜索框-->
+    <!--六大类获取二级菜单-->
+    <style type="text/css">
+        #catalog>li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #catalog>li {
+            background-color: #f1f1f1;
+            margin-bottom: 1px;
+        }
+        
+        .am-nav-ver {
+            float: left;
+        }
+        
+        .am-nav>li,
+        .am-nav>li>a {
+            display: block;
+            position: relative;
+        }
+        
+        .am-nav>li>a {
+            padding: 1rem;
+        }
+        
+        .am-tabs-nav li a {
+            font-size: 1.5rem;
+            padding-top: 1.5rem;
+        }
+        
+        .am-tabs li a {
+            height: 5rem;
+            font-weight: 200;
+        }
+        .am-tabs-ver{
+        	border: 1px solid transparent;
+        }
+        li.seclis {
+            width: 50%;
+            float: left;
+            text-align: center;
+            list-style: none;
+            font-size: 1.6rem;
+            /*line-height: 1.6rem;*/
+        }
+
+        li.seclis>a {
+            color: #999;
+            font-size: 1.2rem;
+            padding-left: 0.4rem;
+        }
+        
+        .seclis img {
+            width: 60px;
+            height: 60px;
+            background: none;
+            display: block;
+            margin: auto;
+        }
+        
+    </style>
+     <!--六大类获取二级菜单-->
+    <div class="am-tabs" id="tab-nam" data-am-tabs="{noSwipe:1;}">
+    	<!--左边固定的六大分类-->
+        <ul class="am-tabs-nav am-nav am-nav-ver" id="catalog" style="padding-top: 1rem;">
+            <li class="am-active">
+                <a href="javascript:;">优选家居</a>
+            </li>
+            <li class="">
+                <a href="javascript:;">品味厨房</a>
+            </li>
+            <li class="">
+                <a href="javascript:;">生活电器</a>
+            </li>
+            <li class="">
+                <a href="javascript:;">极客数码</a>
+            </li>
+            <li class="">
+                <a href="javascript:;">美酒伴侣</a>
+            </li>
+            <li class="">
+                <a href="javascript:;">轻松办公</a>
+            </li>
+        </ul>
+        <!--六大类中的具体小类-->
+        <div id="doc-tab" class="am-tabs-bd am-tabs-ver">
+            <div class="am-tab-panel am-active tp">
+            	<!--每个分类中顶部的图片区域-->
+                <a href="#">
+                    <img src="../assets/i/sec-img/jxjj.jpg" style="width: 100%;height: auto;" class="lazy" />
+                </a>
+            </div>
+            <div class="am-tab-panel tp">
+            	<!--每个分类中顶部的图片区域-->
+                <a href="#">
+                    <img src="../assets/i/sec-img/ppcf.jpg" style="width: 100%;height: auto;" class="lazy" />
+                </a>
+            </div>
+            <div class="am-tab-panel tp">
+                <a href="#">
+                    <img src="../assets/i/sec-img/shdq.jpg" style="width: 100%;height: auto;" class="lazy" />
+                </a>
+            </div>
+            <div class="am-tab-panel tp">
+                <a href="#">
+                    <img src="../assets/i/sec-img/jksm.jpg" style="width: 100%;height: auto;" class="lazy" />
+                </a>
+            </div>
+            <div class="am-tab-panel tp">
+                <a href="#">
+                    <img src="../assets/i/sec-img/mjbl.jpg" style="width: 100%;height: auto;" class="lazy" />
+                </a>
+            </div>
+            <div class="am-tab-panel tp">
+                <a href="#">
+                    <img src="../assets/i/sec-img/qsbg.jpg" style="width: 100%;height: auto;" class="lazy" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--遮罩层部分-->
+    <div class="am-modal am-modal-loading am-modal-out" id="ze-modal" style="margin-top: -99px;display: none;">
+    	<div class="am-modal-action">
+    		<div class="am-modal-hd"></div>
+    		<div class="am-modal-bd">
+    			<!--动态图-->
+    			<span class="am-u-sm-offset-1 am-u-sm-10">
+    				<img class="am-img-responsive" src="../assets/i/loading.gif" />
+    			</span>
+    		</div>
+    	</div>
+    </div>
+    <div id="zzc" class="am-dimmer" style="display: none;"></div>
+
+    <script type="text/javascript">
+    		if (sessionStorage.username) {
+				$("#loginTitle").text("个人中心");
+				$("#login").on("click",function () {
+					location.href="presonalcenter.html";
+				});
+			}else{
+				$("#login").on("click",function () {
+					location.href="login.html";
+				});
+				$("#loginTitle").text("登录");
+//				location.href="login.html";
+			}
+    	//搜索框代码
+    	$('.btn-submit').click(function() {
+               location.href = "search.html";
+               localStorage.setItem("search", $('#search').val());
+           });
+          
+    	//分类获取代码
+        var s = localStorage.getItem("act"),$this;
+        $('#catalog').children('li').click(function() {
+        	//显示之前出现遮罩层及动态图
+    		$('#zzc').addClass('am-active').show();
+      		$('#ze-modal').removeClass('am-modal-out').addClass('am-modal-active').show();
+      		//给遮罩层加动画及时间
+			$('#zzc').animate({'display':'none'},1000,function(){
+				$('#zzc').removeClass('am-active').hide();
+				$('#ze-modal').addClass('am-modal-out').removeClass('am-modal-active').hide();
+			})
+      		//为点击的大类加样式
+            $(this).addClass('am-active');
+            $(this).siblings().removeClass('am-active');
+            $('#doc-tab').children('div').eq($(this).index()).addClass('am-active').siblings().removeClass('am-active');
+            $this = $(this).index();
+            //传递点击的下标到副页面
+            localStorage.setItem("tyid", $this);
+            //获取goodstype数据库
+            $.get("/goodstype", function(result) {
+            	$('.tp').children('.seclis').remove();
+            	each(result);
+            });
+        });
+        var p;
+        
+        //遍历数据库返回结果
+        function each(result){
+        	$.each(result, function(index, item) {
+                    	var $tp = $('.tp');
+                    	if ($this == item.parent_id - 1 && item.id > 6) {
+	                        $("<li class='seclis lazy'><a href='javascript:;'><img src='../assets/i/type/" + item.name + ".png'" + "/>" + item.name + "</a></li>").appendTo($tp.eq($this));
+                    	}
+                    }
+                );
+                //跳转到副页面
+                $('.seclis').click(function(){
+           			location.href = "classify.html";
+           		});
+       };
+        $('#catalog').children('li').eq(s).trigger('click');
+        $('#typelist').click(function() {
+            localStorage.removeItem("act");
+            $('#catalog').children('li').eq(0).trigger('click');
+        })
+    </script>
+</body>
+
+</html>

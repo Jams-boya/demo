@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="加意新品(jiae.com)是一种创意的生活方式，让每个人享受设计的乐趣，每天加一点创意。 对于消费者，你可以抢鲜购买到原创的设计精品，也可以找到设计师为你提供专属的创意设计服务。 对于设计师，你可以免费发布设计新品和设计服务，帮助你自由实现设计梦想。">
+    <meta name="keywords" content="创意电商、新品电商、创意产品、创意家居、创意设计、创意礼物、创意生活、设计师、极客">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <title>加意新品</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="shortcut icon" href="../assets/i/favicon.ico">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="../assets/i/app-icon72x72@2x.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="../assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="../assets/css/center.css">
+    <link rel="stylesheet" href="../assets/css/public.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+</head>
+
+<body style="background-color:white;" class="am-with-fixed-header  am-with-fixed-navbar">
+    <div ng-view id="myAPP"></div>
+    <!--底部-->
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+        <ul id="container" class="am-navbar-nav am-cf am-avg-sm-4" style="background-color:#fff;" id="J-footer-menu">
+            <li>
+                <a href="index.html" class="" id="home">
+                    <span id="homeIcon" class="am-icon-home footerTitleMiao headIcon"></span>
+                    <span id="homeTitle" class="am-navbar-label footerTitleFont headTitle">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="catalog.html" class="" id="typelist">
+                    <span id="typelistIcon" class="am-icon-bars footerTitleMiao headIcon"></span>
+                    <span id="typelistTitle" class="am-navbar-label footerTitleFont headTitle">分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="shopcar.html" class="" id="cart">
+                    <span id="cartIcon" class="am-icon-shopping-cart footerTitleMiao headIcon" style="position:relative;">
+                  <span class="am-badge am-badge-danger am-round" id="J-cart-num" 
+                  style="position: absolute;top: -.2rem;left: .8rem;color: #fff;border-radius: 1000px;-webkit-text-fill-color: #fff;-webkit-text-stroke-color: #fff;font-weight: 300;display:none;">
+                  0</span>
+                    </span>
+                    <span id="cartTitle" class="am-navbar-label footerTitleFont headTitle">购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="login.html" id="login">
+                    <!-- <a id="J-hd-btn-login" href="login"> -->
+                    <span id="loginIcon" class="am-icon-user footerTitleMiao headIcon"></span>
+                    <span id="loginTitle" class="am-navbar-label footerTitleFont headTitle">登录</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--在这里编写你的代码-->
+    <!--头部开始-->
+    <style type="text/css">
+    	.link{
+    		display: block;
+    	}
+    </style>
+    <header data-am-widget="header" class="am-header am-header-fixed  am-header-default am-no-layout">
+    	<div class="am-header-left am-header-nav">
+    		<a href="javascript:window.history.back();" class>
+    			<img class="am-header-icon-custom" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMiAyMCI+PHBhdGggZD0iTTEwLDBsMiwybC04LDhsOCw4bC0yLDJMMCwxMEwxMCwweiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg=="/>
+    		</a>
+    	</div>
+    	<h1 class="am-header-title">
+    		<a href="#" class="pagename">我的关注</a>
+    	</h1>
+    	<div class="am-header-right am-header-nav">
+    		<a href="presonalcenter.html" id="link">
+    			<i class="am-header-icon am-icon-cog "></i>
+    		</a>
+    	</div>
+    </header>
+    <!--头部结束-->
+    <style type="text/css">
+    	.bodypart{
+    		/*margin: 1rem;*/
+    		/*background: red;*/
+    		overflow: hidden;
+    		
+    	}
+    	.bodypart>a{
+    		display: block;
+    		width: 12rem;
+    		/*background: red;*/
+    		float: left;
+    		margin: 0.5rem;
+    		position: relative;
+    	}
+    	.bodypart>a>img{
+    		width: 12rem;
+    		padding: 5px;
+    		display: block;
+    	}
+    	.bodypart>a>h3{
+    		font: 1.5rem/1.5rem "微软雅黑";
+    		color: #333333;
+    		margin: 0;
+    		white-space: nowrap;
+    		text-overflow: ellipsis;
+    		overflow: hidden;
+    		text-align: center;
+    	}
+    	.bodypart>a>h2{
+    		font: 1.2rem/1.5rem "微软雅黑";
+    		color: #999;
+    		margin: 0;
+    		white-space: nowrap;
+    		text-overflow: ellipsis;
+    		overflow: hidden;
+    		text-align: center;
+    	}
+    	.bodypart>a>div{
+    		font: 1.2rem/1.5rem "微软雅黑";
+    		/*color: #999;*/
+    		/*margin: 0;
+    		white-space: nowrap;
+    		text-overflow: ellipsis;
+    		overflow: hidden;*/
+    		text-align: center;
+    	}
+    	.bodypart>a>i{
+    		position: absolute;
+    		top: 0;
+    		right: 1rem;
+    		height: 2rem;
+    		width: 1.5rem;
+    		background: rgba(255,255,255,0.7);
+    		color: black ;
+    		text-align: center;
+    	}
+    	.shadow .message-center{
+    		line-height: 5rem !important;
+    	}
+    	.shadow .am-modal-btn{
+    		width: 50%;
+    		float: left;
+    	}
+    </style>
+    <!--我的收藏添加框-->
+	<div class="am-gallery-item bodypart">
+		<!--<a href="javascript:;" class="">
+			<img class="lazy" data-original="" src="assets/i/shoping-img/l1/1/l111.jpg"  >
+			<h3 class="am-gallery-title j-pro-name">竹语生肖系列鸡年纪念款</h3>
+			<h2 class="am-gallery-title j-pro-brand">BamBoo·中国 </h2>
+			<div class="am-gallery-desc j-pro-price">¥299.00</div>
+			<i class="am-header-icon am-icon-trash j-pro-del del" title="删除"></i>
+		</a>
+		-->
+	</div>
+	<!--遮罩层-->
+	<div class="shadow">
+   	  <div class="message">
+   	  	<div class="message-top">
+   	  		确定要删除吗？
+   	  	</div>
+   	  	<div class="message-center">
+   	  		收藏被删除后不可恢复
+   	  	</div>
+   	  	<div class="message-bottom">
+   	  		<span class="am-modal-btn">取消</span>
+   	  		<span class="am-modal-btn">确定</span>
+   	  	</div>
+   	  </div>
+   </div>
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/amazeui.min.js"></script>
+   <script src="../assets/js/jquery.touch.js" type="text/javascript" charset="utf-8"></script>
+   <script src="../assets/js/main.js"></script>
+</body>
+<script type="text/javascript">
+//	获取用户id
+	var idget=location.search.split("=")[1];
+	$("#link").attr("href","presonalcenter.html?user="+idget);
+	var xl,removeid;
+//	当用户没有收藏时的提示信息
+	if ($(".bodypart").text()) {
+		var textpart="<p>暂无心愿单,赶紧去添加心愿单哦!</p>";
+		$(".bodypart").append(textpart)	;
+	}
+
+//	从数据库调用收藏信息
+	$.post("/favoriteit",{favorite:idget},function (result) {
+	console.log(result);
+		
+		for (var x of result) {
+			var htmladd=`<a href="javascript:;" class="add">
+							<img class="lazy" data-original="" src="../assets/i/shoping-img/${x.pic1}.jpg"  >
+							<h3 class="am-gallery-title j-pro-name">${x.title}</h3>
+							<h2 class="am-gallery-title j-pro-brand changetext">${x.name}·${x.country} </h2>
+							<div class="am-gallery-desc j-pro-price">¥${x.price}</div>
+							<i class="am-header-icon am-icon-trash j-pro-del del" id="${x.id}" title="删除"></i>
+						</a>`;
+//			有信息加入时移除提示信息
+			$(".bodypart>p").remove();
+//			添加收藏信息
+			$(".bodypart").append(htmladd);
+		}
+	})
+	//绑定删除事件
+	$(document).on("tap",".del",function () {
+		$(".shadow").show();
+		$(".shadow>.message").addClass("big");
+		xl=$(this).parents(".add").index();
+		removeid=$(this).attr("id");	
+	});
+//			删除取消
+	$(".am-modal-btn").eq(0).on("tap",function () {
+		$(".shadow>.message").removeClass("big");
+		$(".shadow>.message").addClass("small");
+		setTimeout(function () {
+			$(".shadow").hide();
+			$(".shadow>.message").removeClass("small");
+		},300);
+	});
+//			删除确定
+	$(".am-modal-btn").eq(1).on("tap",function () {
+		$(".shadow>.message").removeClass("big");
+		$(".shadow>.message").addClass("small");
+		setTimeout(function () {
+			$(".shadow").hide();
+			$(".shadow>.message").removeClass("small");
+		},300);
+//		$(".add").eq(xl).remove();
+//				删除记录
+		$.get("/favoriteDel",{delid:removeid},function (result) {
+			if (result=="success") {
+				location.reload();
+			}
+		})
+	});
+//	遮罩层宽高设置
+	$(".shadow").height($(document).height());
+</script>
+</html>

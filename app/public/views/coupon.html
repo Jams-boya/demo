@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="加意新品(jiae.com)是一种创意的生活方式，让每个人享受设计的乐趣，每天加一点创意。 对于消费者，你可以抢鲜购买到原创的设计精品，也可以找到设计师为你提供专属的创意设计服务。 对于设计师，你可以免费发布设计新品和设计服务，帮助你自由实现设计梦想。">
+    <meta name="keywords" content="创意电商、新品电商、创意产品、创意家居、创意设计、创意礼物、创意生活、设计师、极客">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <title>加意新品</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="shortcut icon" href="../assets/i/favicon.ico">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="../assets/i/app-icon72x72@2x.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="../assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="../assets/css/center.css">
+    <link rel="stylesheet" href="../assets/css/public.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+</head>
+
+<body style="background-color: white;" class="am-with-fixed-header  am-with-fixed-navbar">
+    <div ng-view id="myAPP"></div>
+    <!--底部-->
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+        <ul id="container" class="am-navbar-nav am-cf am-avg-sm-4" style="background-color:#fff;" id="J-footer-menu">
+            <li>
+                <a href="index.html" class="" id="home">
+                    <span id="homeIcon" class="am-icon-home footerTitleMiao headIcon"></span>
+                    <span id="homeTitle" class="am-navbar-label footerTitleFont headTitle">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="catalog.html" class="" id="typelist">
+                    <span id="typelistIcon" class="am-icon-bars footerTitleMiao headIcon"></span>
+                    <span id="typelistTitle" class="am-navbar-label footerTitleFont headTitle">分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="shopcar.html" class="" id="cart">
+                    <span id="cartIcon" class="am-icon-shopping-cart footerTitleMiao headIcon" style="position:relative;">
+                  <span class="am-badge am-badge-danger am-round" id="J-cart-num" 
+                  style="position: absolute;top: -.2rem;left: .8rem;color: #fff;border-radius: 1000px;-webkit-text-fill-color: #fff;-webkit-text-stroke-color: #fff;font-weight: 300;display:none;">
+                  0</span>
+                    </span>
+                    <span id="cartTitle" class="am-navbar-label footerTitleFont headTitle">购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="login.html" id="login">
+                    <!-- <a id="J-hd-btn-login" href="login"> -->
+                    <span id="loginIcon" class="am-icon-user footerTitleMiao headIcon"></span>
+                    <span id="loginTitle" class="am-navbar-label footerTitleFont headTitle">登录</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--在这里编写你的代码-->
+    <!--头部开始-->
+    <style type="text/css">
+    	.link{
+    		display: block;
+    	}
+    </style>
+    <header data-am-widget="header" class="am-header am-header-fixed  am-header-default am-no-layout">
+    	<div class="am-header-left am-header-nav">
+    		<a href="javascript:window.history.back();" class>
+    			<img class="am-header-icon-custom" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMiAyMCI+PHBhdGggZD0iTTEwLDBsMiwybC04LDhsOCw4bC0yLDJMMCwxMEwxMCwweiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg=="/>
+    		</a>
+    	</div>
+    	<h1 class="am-header-title">
+    		<a href="#" class="pagename">我的优惠券</a>
+    	</h1>
+    	<div class="am-header-right am-header-nav">
+    		<a href="presonalcenter.html" class="link">
+    			<i class="am-header-icon am-icon-cog "></i>
+    		</a>
+    	</div>
+    </header>
+    <!--头部结束-->
+    <style type="text/css">
+    	.am-active a{
+    		background: white !important;
+    		color: #e74144 !important;
+    	}
+		.coupon{
+			width: 90%;
+			height: 13rem;
+			background: lightcoral;
+			margin: 0.8rem auto;
+			position: relative;
+		}
+		.coupon>.value{
+			position: absolute;
+			top: 0.5rem;
+			left: 0.5rem;
+			font: bold 3.5rem/5rem "微软雅黑";
+			color: gold;
+			width: 70%;
+			height: 5rem;
+		}
+		.coupon>.condition{
+			position: absolute;
+			top: 0.5rem;
+			left: 75%;
+			width: 20%;
+			height: 5rem;
+			font: bold 1.5rem/2rem "微软雅黑";
+			color: red;
+		}
+		.coupon>.data{
+			position: absolute;
+			top: 6rem;
+			left: 0.5rem;
+			width: 95%;
+			height: 3rem;
+			font: bold 2rem/3rem "微软雅黑";
+			color: blue;
+		}
+	</style>
+	<!--显示优惠券的部分-->
+	<div data-am-widget="tabs" class="am-tabs am-tabs-default am-no-layout" style="margin: 0;">
+		<!--显示是否使用及过去表头-->
+		<ul class="am-tabs-nav am-cf">
+			<li class="am-active"><a href="javascript:;">未使用</a></li>
+			<li class=""><a href="javascript:;">已使用</a></li>
+			<li class=""><a href="javascript:;">已过期</a></li>
+		</ul>
+		<!--未使用添加部分-->
+		<div class="am-tabs-bd showit" style="border: 0px; touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+			<div data-tab-panel-0="" class="am-tab-panel am-active">
+				
+				<!--<div class="coupon">
+					<div class="value">
+						￥30优惠券
+					</div>
+					<div class="condition">
+						满99元可用
+					</div>
+					<div class="data">
+						截止日期：2017-03-20
+					</div>
+				</div>-->
+			</div>
+			<!--已使用添加部分-->
+			<div data-tab-panel-1="" class="am-tab-panel coupon-shiyong">
+				
+			</div>
+			<!--已过期添加部分-->
+			<div data-tab-panel-2="" class="am-tab-panel coupon-shiyong">
+				
+			</div>
+		</div>
+	</div>
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/amazeui.min.js"></script>
+   <script src="../assets/js/jquery.touch.js" type="text/javascript" charset="utf-8"></script>
+   <script src="../assets/js/main.js"></script>
+</body>
+<script type="text/javascript">
+	var price,rull,data;
+//	获取用户ID
+	var idget=location.search.split("=")[1];
+$(".link").attr("href","presonalcenter.html?user="+idget);
+//	var idget=1;
+	$.post("/coupon",{conName:idget},function (result) {
+//		动态添加优惠券信息
+		for (var v of result) {
+//			对是否过期进行判断
+//				新建当前日期
+			var nowtime=new Date();
+//			获得优惠券到期日期
+			var endtime=new Date(v.endtime);
+//			获得当前毫秒数
+			var nowmiao=nowtime.getTime();
+//			获得到期日期毫秒数
+			var endmiao=endtime.getTime();
+//			获得到期日期年份
+			var endyear=endtime.getFullYear();
+//			获得到期日期月份
+			var endmonth=endtime.getMonth()+1;
+//			获得到期日期几号
+			var endday=endtime.getDate();
+//			获得到期日期小时数
+			var endhours=endtime.getHours();
+//			获得到期日期分钟数
+			var endmin=endtime.getMinutes();
+//			对分钟数小于九时前面加一个0
+			endmin=endmin>9?endmin:"0"+endmin;
+//			获得到期日期秒数
+			var endsec=endtime.getSeconds();
+//			对秒数小于九时前面加一个0
+			endsec=endsec>9?endsec:"0"+endsec;
+//			将年月日拼接起来
+			var enddata=endyear+"-"+endmonth+"-"+endday;
+//			将时分秒拼接起来
+			var enddataT=endhours+":"+endmin+":"+endsec;
+			price=v.price;
+			rull=v.rule;
+//			新建元素
+			var piaopiao='<div class="coupon"><div class="value">￥'+price+'优惠券</div><div class="condition">满'+rull+'元可用</div><div class="data">截止时间：<br/>'+enddata+"　"+enddataT+'</div></div>';
+//			判断是否使用
+			if (v.title=="未使用") {
+				endmiao<nowmiao?$(".showit>div").eq(2).append(piaopiao):$(".showit>div").eq(0).append(piaopiao);
+			}
+			if (v.title=="已使用") {
+				$(".showit>div").eq(1).append(piaopiao);
+			}
+		}
+		
+	})
+</script>
+</html>

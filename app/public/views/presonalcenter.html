@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="加意新品(jiae.com)是一种创意的生活方式，让每个人享受设计的乐趣，每天加一点创意。 对于消费者，你可以抢鲜购买到原创的设计精品，也可以找到设计师为你提供专属的创意设计服务。 对于设计师，你可以免费发布设计新品和设计服务，帮助你自由实现设计梦想。">
+    <meta name="keywords" content="创意电商、新品电商、创意产品、创意家居、创意设计、创意礼物、创意生活、设计师、极客">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <title>加意新品</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="shortcut icon" href="../assets/i/favicon.ico">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="../assets/i/app-icon72x72@2x.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="../assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="../assets/css/center.css">
+    <link rel="stylesheet" href="../assets/css/public.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+</head>
+
+<body style="background-color: #f7f7f7;" class="am-with-fixed-header  am-with-fixed-navbar">
+    <div ng-view id="myAPP"></div>
+    <!--底部-->
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+        <ul id="container" class="am-navbar-nav am-cf am-avg-sm-4" style="background-color:#fff;" id="J-footer-menu">
+            <li>
+                <a href="index.html" class="" id="home">
+                    <span id="homeIcon" class="am-icon-home footerTitleMiao  headIcon"></span>
+                    <span id="homeTitle" class="am-navbar-label footerTitleFont  headTitle">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="catalog.html" class="" id="typelist">
+                    <span id="typelistIcon" class="am-icon-bars footerTitleMiao headIcon"></span>
+                    <span id="typelistTitle" class="am-navbar-label footerTitleFont headTitle">分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="shopcar.html" class="" id="cart">
+                    <span id="cartIcon" class="am-icon-shopping-cart footerTitleMiao headIcon" style="position:relative;">
+                  <span class="am-badge am-badge-danger am-round" id="J-cart-num" 
+                  style="position: absolute;top: -.2rem;left: .8rem;color: #fff;border-radius: 1000px;-webkit-text-fill-color: #fff;-webkit-text-stroke-color: #fff;font-weight: 300;display:none;">
+                  0</span>
+                    </span>
+                    <span id="cartTitle" class="am-navbar-label footerTitleFont headTitle">购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="login.html" id="login">
+                    <!-- <a id="J-hd-btn-login" href="login"> -->
+                    <span id="loginIcon" class="am-icon-user footerTitleMiao footerTitleMiaoActive headIcon"></span>
+                    <span id="loginTitle" class="am-navbar-label footerTitleFont footerTitleFontActive headTitle">登录</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--在这里编写你的代码-->
+    <!--头部开始-->
+    <header data-am-widget="header" class="am-header am-header-fixed  am-header-default am-no-layout">
+    	<div class="am-header-left am-header-nav">
+    		<a href="login.html" class>
+    			<img class="am-header-icon-custom" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMiAyMCI+PHBhdGggZD0iTTEwLDBsMiwybC04LDhsOCw4bC0yLDJMMCwxMEwxMCwweiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg=="/>
+    		</a>
+    	</div>
+    	<h1 class="am-header-title">
+    		<a href="#" class="pagename">个人中心</a>
+    	</h1>
+    	<div class="am-header-right am-header-nav">
+    		<a href="login.html">
+    			<i class="am-header-icon am-icon-sign-out"></i>
+    		</a>
+    	</div>
+    </header>
+    <!--头部结束-->
+    <div class="user">
+		<img class="am-circle" src="../assets/i/tx.png" width="50" height="50">
+		<div class="username" id="username">
+			<!-- <p>name</p> -->
+			<!--动态添加用户名-->
+				<p></p>
+			<!-- <p id="doller">$1000</p> -->
+		</div>
+	</div>
+	<!--下方的九宫格部分-->
+   <div class="list">
+		<ul class="am-avg-sm-3 boxes">
+			<!--我的订单-->
+			<li class="box box-1" style="height: 9rem; border-right: 1px solid #ebebeb; border-bottom: 1px solid #ebebeb">
+				<a href="javascript:;">
+					<img src="../assets/i/personallogo/orders.png">
+					<span style="color:black; display: block;font-size: 1.2rem; padding-top: 1rem;">我的订单</span>
+				</a>
+			</li>
+			<!--我的积分-->
+			
+			<li class="box box-2" style="height: 9rem; border-right: 1px solid #ebebeb; border-bottom: 1px solid #ebebeb">
+				<a href="javascript:;">
+					<img src="../assets/i/personallogo/integral.png">
+					<span style="color:black; display: block;font-size: 1.2rem; padding-top: 1rem;">我的积分</span>
+				</a>
+			</li>
+			<!--我的优惠券-->
+			<li class="box box-3" style="height: 9rem; border-right: 1px solid #ebebeb;border-bottom: 1px solid #ebebeb">
+				<!--<a onclick="javascript:openAlert('抱歉，程序猿正在努力开发中。。。');"></a>-->
+				<a href="javascript:;">
+					<img src="../assets/i/personallogo/coupon.png">
+					<span style="color:black; display: block;font-size: 1.2rem; padding-top: 1rem;">我的优惠券</span>
+				</a>
+			</li>
+			<!--我的地址-->
+			<li class="box box-4" style="height: 9rem; border-right: 1px solid #ebebeb;border-bottom: 1px solid #ebebeb">
+				<a href="javascript:;">
+					<img src="../assets/i/personallogo/address.png">
+					<span style="color:black; display: block;font-size: 1.2rem; padding-top: 1rem;">我的地址</span>
+				</a>
+			</li>
+			<!--我的足迹-->
+			<li class="box box-5" style="height: 9rem; border-right: 1px solid #ebebeb;border-bottom: 1px solid #ebebeb">
+				<a href="javascript:;">
+					<img src="../assets/i/personallogo/footprint.png">
+					<span style="color:black; display: block;font-size: 1.2rem; padding-top: 1rem;">我的足迹</span>
+				</a>
+			</li>
+			<!--我的心愿-->
+			<li class="box box-6" style="height: 9rem; border-right: 1px solid #ebebeb; border-bottom: 1px solid #ebebeb">
+				<a href="javascript:;">
+					<img src="../assets/i/personallogo/attention.png">
+					<span style="color:black; display: block;font-size: 1.2rem; padding-top: 1rem;">我的心愿单</span>
+				</a>
+			</li>
+			<!--我的售后-->
+			<li class="box box-7" style="height: 9rem; border-right: 1px solid #ebebeb;border-bottom: 1px solid #ebebeb">
+				<a href="javascript:;">
+					<img src="../assets/i/personallogo/service.png">
+					<span style="color:black; display: block;font-size: 1.2rem; padding-top: 1rem;">我的售后</span>
+				</a>
+			</li>
+			<!--猜你喜欢-->
+			<li class="box box-8" style="height: 9rem; border-right: 1px solid #ebebeb;border-bottom: 1px solid #ebebeb">
+				<a href="javascript:;">
+					<img src="../assets/i/personallogo/guesslike.png">
+					<span style="color:black; display: block;font-size: 1.2rem; padding-top: 1rem;">猜你喜欢</span>
+				</a>
+			</li> 
+			<!--加意指南-->
+			<li class="box box-9" style="height: 9rem; border-right: 1px solid #ebebeb; border-bottom: 1px solid #ebebeb">
+				<a href="javascript:;">
+					<img src="../assets/i/personallogo/campus.png">
+					<span style="color:black; display: block;font-size: 1.2rem; padding-top: 1rem;">加意指南</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+   <!--遮罩层-->
+   <div class="shadow">
+   	<!--点击我的积分时弹出的弹框-->
+   	  <div class="message">
+   	  	<div class="message-top">
+   	  		消息
+   	  	</div>
+   	  	<div class="message-center">
+   	  		抱歉，程序猿正在努力开发中。。。
+   	  	</div>
+   	  	<div class="message-bottom">
+   	  		<span class="am-modal-btn">确定</span>
+   	  	</div>
+   	  </div>
+   </div>
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/amazeui.min.js"></script>
+   <script src="../assets/js/jquery.touch.js" type="text/javascript" charset="utf-8"></script>
+   <script src="../assets/js/main.js"></script>
+</body>
+<script type="text/javascript">
+	var idget;
+	if (sessionStorage.username) {
+		var username=sessionStorage.username;
+		$("#loginTitle").text("个人中心");
+		$.post("/getUserId",{userName:username},function (result) {
+			idget=result[0].id;
+			//	获取用户名
+			$.get("/useruser",{name:idget},function (result) {
+				var res=result[0].username;
+				var rex=/^\d{11}$/;
+				
+				if (rex.test(res)) {
+					res=res.split("");
+					res.splice(3,4,"*","*","*","*")
+				}else{
+					res=res.split("@");
+					var res1=res[0].split("");
+					res=res1[0]+res1[1]+res1[2]+"*"+"*"+"*"+"*"+"@"+res[1];
+				}
+				$("#username>p").html(res);
+			})
+			//	各个跳转链接的设置
+			//	我的订单链接设置
+				$(".boxes").children("li").eq(0).children("a").attr("href","myorder.html?id="+idget);
+			//	我的优惠券链接设置
+				$(".boxes").children("li").eq(2).children("a").attr("href","coupon.html?id="+idget);
+			//	我的地址链接设置
+				$(".boxes").children("li").eq(3).children("a").attr("href","address.html?id="+idget);
+			//	我的足迹链接设置
+				$(".boxes").children("li").eq(4).children("a").attr("href","footsteep.html?id="+idget);
+			//	我的心愿单链接设置
+				$(".boxes").children("li").eq(5).children("a").attr("href","myfavorite.html?id="+idget);
+			//	我的售后链接设置
+				$(".boxes").children("li").eq(6).children("a").attr("href","afterSale.html?id="+idget);
+			//	猜你喜欢链接设置
+				$(".boxes").children("li").eq(7).children("a").attr("href","myfavorite.html?id="+idget);
+			//	加意指南链接设置
+				$(".boxes").children("li").eq(8).children("a").attr("href","guide.html?id="+idget);
+		});
+	}else{
+		location.href="login.html";
+	}
+//	设置遮罩层的宽高
+	$(".shadow").height($(document).height());
+//	我的积分点击事件
+	$(".box-2").on('tap',function () {
+		$(".shadow").show();
+		$(".shadow>.message").addClass("big");
+	});
+//	确定按钮的点击事件
+	$(".am-modal-btn").on("tap",function () {
+		$(".shadow>.message").removeClass("big");
+		$(".shadow>.message").addClass("small");
+//		延时消失,确保动画完成
+		setTimeout(function () {
+			$(".shadow").hide();
+			$(".shadow>.message").removeClass("small");
+		},300);
+	});
+</script>
+</html>

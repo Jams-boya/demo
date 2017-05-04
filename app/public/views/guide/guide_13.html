@@ -1,0 +1,484 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="加意新品(jiae.com)是一种创意的生活方式，让每个人享受设计的乐趣，每天加一点创意。 对于消费者，你可以抢鲜购买到原创的设计精品，也可以找到设计师为你提供专属的创意设计服务。 对于设计师，你可以免费发布设计新品和设计服务，帮助你自由实现设计梦想。">
+    <meta name="keywords" content="创意电商、新品电商、创意产品、创意家居、创意设计、创意礼物、创意生活、设计师、极客">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <title>加意新品</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="shortcut icon" href="../../assets/i/favicon.ico">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="../../assets/i/app-icon72x72@2x.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="apple-touch-icon-precomposed" href="../../assets/i/app-icon72x72@2x.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="../../assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <link rel="stylesheet" href="../../assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="../../assets/css/center.css">
+    <link rel="stylesheet" href="../../assets/css/public.css">
+    <link rel="stylesheet" href="../../assets/css/home.css">
+</head>
+
+<body style="background-color:white;" class="am-with-fixed-header  am-with-fixed-navbar">
+    <div ng-view id="myAPP"></div>
+    <!--底部-->
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+        <ul id="container" class="am-navbar-nav am-cf am-avg-sm-4" style="background-color:#fff;" id="J-footer-menu">
+            <li>
+                <a href="../index.html" class="" id="home">
+                    <span id="homeIcon" class="am-icon-home footerTitleMiao  headIcon"></span>
+                    <span id="homeTitle" class="am-navbar-label footerTitleFont  headTitle">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="../catalog.html" class="" id="typelist">
+                    <span id="typelistIcon" class="am-icon-bars footerTitleMiao headIcon"></span>
+                    <span id="typelistTitle" class="am-navbar-label footerTitleFont headTitle">分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="../shopcar.html" class="" id="cart">
+                    <span id="cartIcon" class="am-icon-shopping-cart footerTitleMiao headIcon" style="position:relative;">
+                  <span class="am-badge am-badge-danger am-round" id="J-cart-num" 
+                  style="position: absolute;top: -.2rem;left: .8rem;color: #fff;border-radius: 1000px;-webkit-text-fill-color: #fff;-webkit-text-stroke-color: #fff;font-weight: 300;display:none;">
+                  0</span>
+                    </span>
+                    <span id="cartTitle" class="am-navbar-label footerTitleFont headTitle">购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="../login.html" id="login">
+                    <!-- <a id="J-hd-btn-login" href="login"> -->
+                    <span id="loginIcon" class="am-icon-user footerTitleMiao headIcon"></span>
+                    <span id="loginTitle" class="am-navbar-label footerTitleFont headTitle">登录</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--在这里编写你的代码-->
+    <!--头部开始-->
+    <style type="text/css">
+    	.link{
+    		display: block;
+    	}
+    </style>
+    <header data-am-widget="header" class="am-header am-header-fixed  am-header-default am-no-layout">
+    	<div class="am-header-left am-header-nav">
+    		<a href="javascript:window.history.back();" class>
+    			<img class="am-header-icon-custom" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMiAyMCI+PHBhdGggZD0iTTEwLDBsMiwybC04LDhsOCw4bC0yLDJMMCwxMEwxMCwweiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg=="/>
+    		</a>
+    	</div>
+    	<h1 class="am-header-title">
+    		<a href="#" class="pagename">加意新品</a>
+    	</h1>
+    	<div class="am-header-right am-header-nav">
+    		<a href="presonalcenter.html" class="link">
+    			<i class="am-header-icon am-icon-cog "></i>
+    		</a>
+    	</div>
+    </header>
+    <!--头部结束-->
+	<div data-am-widget="titlebar" class="am-titlebar am-titlebar-multi am-jiaecontent-one am-no-layout">
+        <h2 class="am-titlebar-title">加入加意</h2>
+    </div>
+    <div class="am-jiaecon-two">
+        <div class="am-jiaecon-twoTop">
+            <img class="jiaecon-img03" src="../../assets/i/personallogo/joinjiae01.jpg">
+            <p class="jiaecon-p7">加意新品，是一种创意的生活方式，让每个人享受设计的乐趣，每天加一点创意</p>
+            <p class="jiaecon-p7">创意不是一份工作，是一种生活</p>
+            <p class="jiaecon-p7">在加意新品，我们给您，+1点意思，+1点伙伴，+1点逼格，+1点福利，+1点未来，+1点财富</p>
+        </div> 
+         <p class="jiaecon-p2">
+            <span style="font-weight:700; color:#e74144;">岗位要求：</span><br>
+         </p>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>财务总监</u>（北京）</p>
+             <p class="jiaecon-p8 contentpp2"style="display:none;">
+             	岗位职责：<br>
+             	1、负责完善公司财务管理体系，指导、监督各部门执行财务政策及财务制度；<br>
+             	2、组织编制和实施公司年度财务预算，检查预算执行情况、分析和调整预算方案； <br>
+             	3、负责审核签署公司预算报表、财务收支计划、成本费用计划、财务报告，会签涉及财务收支的重大业务计划、经济合同、经济协议等；<br>
+             	4、统筹公司资金、资源管理，对公司财务资源进行有效计划管理；<br>
+             	5、组织实施内外部财务审计，确保财务信息准确、完整、可靠； <br>
+             	6、及时就公司财务状况、经营成果和资金变动情况，向公司领导进行沟通汇报，为公司运营提供决策数据支持；<br>
+             	7、参与公司投融资、重要经营活动的决策和方案制定，参与重大经济合同或协议的研究、审查，参与重要经济问题的分析和决策，提出资本运作策略建议；<br>
+             	8、就财务事项，协调与投资人关系；<br>
+             	9、组织财务信息系统建设工作。<br><br>
+             	任职要求：<br>
+             	1、35岁以上，会计、财务或相关专业全日制本科以上学历，中级会计师以上职称或CPA； <br>
+             	2、五年以上财务管理工作经验，三年以上财务经理或总监工作经验，具有管理团队经验，拥有互联网行业工作背景优先考虑； <br>
+             	3、具有全面的财务专业知识、账务处理及财务管理经验，有财务体系构建、财务预决算、会计核算、税务筹划、公司理财方面的实操经验；<br>
+             	4、精通国家财税法律规范，具备优秀的职业判断能力和丰富的财会项目分析处理经验，谙熟国内会计准则以及相关的财务、税务、审计法规、政策；<br>
+             	5、良好的职业道德与操守，为人正直、责任心强、作风严谨、工作仔细认真； <br>
+             	6、有较强的沟通协调能力，良好的纪律性、团队合作以及开拓创新精神；<br>
+             	7、适应创业公司的节奏和氛围。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>跨境供应链总监</u>（北京）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	岗位职责：<br>
+             	1、根据公司发展战略组织建立供应链管理中⼼组织架构、流程标准及管理制度,保障业务工作高效开展；<br>
+            	2、根据公司发展需要,建立供应商管理体系、仓储物流管理体系、质量管理体系等工作,并组织实施；<br>
+            	3、负责筹建公司跨界电商物流体系，包括相关进出口资质、选择并管理第三方保税（自贸区）物流仓储仓库、发展物流运输合作伙伴等；<br>
+            	4、根据公司的统一部署，为特定境外商品的导入建立物流支持，确保交货期；<br>
+            	5、统筹销售计划、采购与订单履行环节的有效运作以及相关管理工作。<br><br>
+            	岗位要求：<br>
+            	1、本科及以上学历，男女不限，40岁以下，英语熟练；<br>
+            	2、五年以上国际进出口贸易、跨境物流行业工作经验， 具有欧美、日韩台等地进出口产品物流运输经验优先考虑；<br>
+            	3、熟悉进出口操作流程，熟悉外贸进出口法律条规，具备贸易管理专业知识和相关技能；<br>
+            	4、有风险管理经验，熟知整个进口操作环节中的风险点，能够及时处理解决操作环节中的各种问题；<br>
+            	5、熟悉进口业务的相关规定及政策要求，了解整个进口操作流程，熟悉海关办事流程，并能独立解决通关过程中出现的问题；<br>
+            	6、具备跨境物流的筹划、实施和管理经验，有互联网、电商运营经验者优先。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>CRM经理JD</u>（北京）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	岗位职责：<br>
+            	1、负责用户管理体系建立，完善；<br>
+            	2、日常运营数据报表统计、分析、问题预警、实时反馈、优化营销内容、收集整理营销效果、提出改进方案；<br>
+            	3、以用户生命周期角度运营用户，提高平台用户的活跃度及粘性；<br>
+            	4、用户细分，对用户进行分层分级研究并分类运营；挖掘平台用户的深层次需要，满足用户的多样化需求；<br>
+            	5、通过有效的运营手段和工具持续提升用户活跃度，召回流失用户，擅长运用用户引导、利益刺激、情感关怀、会员等级等方式提升用户购买力，针对不同类型用户设计有效激励机制。<br><br>
+            	岗位要求：<br>
+            	1、本科（含）以上学历；<br>
+            	2、3年以上互联网运营相关工作经验，且至少于2年移动互联网用户运营工作经验；<br>
+            	3、有建立用户管理体系经验；<br>
+            	4、较强的数据分析能力，创新能力、逻辑思维能力、沟通能力，以结果为导向；<br>
+            	5、精通会员营销的相关工具、手段，熟悉会员营销及活动策划的相关流程与环节；<br>
+            	6、具有策划、分析、推广及营运经验，熟悉移动互联网发展方向，掌握移动互联网最新内容制作流程；对新事物有敏锐感；做事具有创新性不拘泥于现在，有丰富的运营经验。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>产品经理</u>（上海）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	岗位职责：<br>
+            	1、负责探索和分析用户购买海外产品的需求，并结合加意新品的特性，制定相关的产品和运营策略；<br>
+            	2、产品开发和运营的落地执行，探索产品迭代路径；<br>
+            	3、负责公司产品的需求制定，文档撰写，为公司新产品与新功能提供创意；<br>
+            	4、参与设计讨论，和开发团队共同创建用户界面，跟踪产品效果，提出改善方案；<br>
+            	5、跟踪开发需求，协调开发进度；<br>
+            	6、根据功能需求撰写测试用例并完成产品测试。<br><br>
+            	任职要求：<br>
+            	1、3年以上知名互联网公司移动端的产品经验，熟悉什么值得买、小红书、山茶花、半糖等新电商模式者优先；<br>
+            	2、对中产阶级的海外购物需求有一定的体会和理解；<br>
+            	3、善于研究和分析用户需求，过往工作经历中提出过创新的见解并被采纳实施；<br>
+            	4、正规本科以上学历。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>用户体验/交互设计师/UE</u>（上海）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	岗位职责：<br>
+            	1、负责设计用户体验优异的Web及移动应用；<br>
+            	2、负责与产品经理、需求分析师、最终用户及产品开发人员沟通协作，优化用户交互流程和体验； <br>
+            	3、参与产品整体设计、UI/UE设计方案，与产品经理进行产品的原型设计及细化交互设计；<br>
+            	4、根据运营数据分析用户体验和用户行为，不断优化用户体验。<br><br>
+            	技术要求：<br>
+            	1、熟悉各种常见的用户交互方式；<br>
+            	2、能够设计用户体验优良的界面和流程；<br>
+            	3、能够熟练使用各类设计软件，如：AI、PS等，熟练掌握一种原型设计工具（如Axure）；<br>
+            	4、良好的自学能力和独立解决问题的能力，良好的沟通和团队协作能力；<br>
+            	5、三年以上电商用户体验/交互设计或相关工作经验。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>Wed开发工程师</u>（北京）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	职责描述：<br>
+            	1、根据产品需求和设计图完成兼容性良好的前端页面制作；<br>
+           	 	2、协助定义开发接口。<br><br>
+           	 	任职要求：<br>
+           	 	1、熟悉HTML5标准各种开发技术，熟练使用HTML、CSS、JavaScript开发符合W3C标准的网站前端页面；<br>
+           	 	2、熟悉响应式布局的前端页面开发，熟悉Bootstrap等主流前端框架，熟练掌握一种前端设计和开发工具；<br>
+           	 	3、熟悉网站前端性能优化技术；<br>
+           	 	4、良好的自学能力和独立解决问题的能力，良好的沟通和团队协作能力；<br>
+           	 	5、2年以上WEB前端开发经验，1年以上HTML 5开发经验、良好的自学能力和独立解决问题的能力，良好的沟通和团队协作能力。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>IOS开发工程师</u>（北京）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	职责描述：<br>
+            	1、向ios开发经理汇报工作；<br>
+            	2、在指导下，完成app的功能模块开发、打包发布等开发工作。<br><br>
+            	任职要求：<br>
+            	1、计算机相关专业本科或以上毕业，基础扎实；<br>
+            	2、熟悉ios布局规范，熟练使用xcode、oc；<br>
+            	3、良好的自学能力和独立解决问题的能力，良好的沟通和团队协作能力；<br>
+            	4、1年以上开发经验；<br>
+            	5、有UI／UX设计能力的优先；<br>
+            	6、实习生请带成绩单。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>Android开发经理</u>（北京）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	岗位职责：<br>
+            	1、带领Android团队，负责产品研发和技术管理；<br>
+            	2、产品功能模块开发；<br>
+            	3、第三方SDK接入；<br>
+            	4、渠道打包发布；<br>
+            	5、知识积累和人员梯队培养。<br><br>
+            	任职要求：<br>
+            	1、知名院校计算机或数学等相关专业本科或以上毕业；<br>
+            	2、两年以上工作经验；<br>
+            	3、两个以上完整项目经验（面试时需要展示项目）；<br>
+            	4、熟练掌握AndroidStudio及相关工具（比如Gradle）或elipse＋ADT＋Ant；<br>
+            	5、熟练使用Git；<br>
+            	6、深刻了解机型适配、性能指标和网络开发。<br><br>
+            	加分项：<br>
+            	1、当过项目主程序；<br>
+            	2、当过技术团队Leader；<br>
+            	3、有过服务器开发经验；<br>
+            	4、有过网页（微站）开发经验；<br>
+            	5、有个人专利；<br>
+            	6、github上有知名共享工程。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>Java高级开发工程师</u>（北京）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	岗位职责：<br>
+            	1、负责应用的Java服务器端开发；<br>
+            	2、参与制定开发接口；<br>
+            	3、独立设计并开发程序中相关的模块。<br><br>
+            	任职要求：<br>
+            	1、扎实的Java编程基础，热爱编程、具有良好的代码风格；<br>
+            	2、熟悉J2EE架构、RESTful的Web服务和主要的开发模式，能熟练使用JAVA进行服务器端开发；<br>
+            	3、熟悉Spring/Struts/Hibernate等开源框架，熟悉Tomcat等应用服务器；<br>
+            	4、熟悉数据库开发，熟练掌握MySQL，熟悉数据库设计；<br>
+            	5、良好的自学能力和独立解决问题的能力，良好的沟通和团队协作能力；<br>
+            	6、三年以上Java服务端开发经验，有移动互联网应用服务端开发经验优先；<br>
+            	7、熟悉微信开发接口者优先；<br>
+            	8、熟悉Play framework开发者优先；<br>
+            	9、计算机相关专业本科或以上毕业。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>WEB开发工程师</u>（北京）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	岗位职责：<br>
+            	1、1手机端和PC端Web开发；<br>
+            	2、参与制定Web与服务端交互的接口。<br><br>
+            	任职要求：<br>
+            	1、熟悉HTML5标准及，熟练使用HTML、CSS、JavaScript开发符合W3C标准的页面；<br>
+            	2、熟悉响应式布局的页面开发，熟悉React、Bootstrap等主流框架，熟悉jQuery、Ajax等主要技术，熟练掌握一种主流的Web设计和开发工具；<br>
+            	3、熟悉Web页面性能和浏览器兼容性优化的相关技术；<br>
+            	4、良好的自学能力和独立解决问题的能力，良好的沟通和团队协作能力；<br>
+            	5、三年以上Web开发经验，1年以上移动端Web开发经验；<br>
+            	6、有UI／UX设计能力的优先；<br>
+           	 	7、计算机相关专业本科或以上毕业。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>设计部UI设计师</u>（北京/上海）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	岗位职责：<br>
+            	1、负责把控官网、手机APP端等产品的整体风格，界面设计；<br>
+            	2、准确理解产品需求，深谙用户体验，根据产品提供用户界面合理化建议，完成产品视觉和交互设计；<br>
+            	3、定向网站需求的设计制作，宣传图片、logo、icon等设计制作；<br>
+            	4、配合产品运营制作相关专题推广策划案；<br>
+            	5、熟悉与了解策划、执行活动及产品的营销方案专题页面设计。<br><br>
+            	任职要求：<br>
+            	1、2年以上网页UI设计经验；<br>
+            	2、有较强的美术功底和良好的设计表现能力，手绘和创作感强，能够准确把握网站（APP）的整体风格及视觉表现，对网站（APP）的结构策划有独特的见解；<br>
+            	3、精通Web、iOS、Android、Html5的设计规范，精通各种常用设计工具；<br>
+            	4、熟练运用3DMAX、AI、Photoshop、Dreamweaver、Fireworks、Flash等软件工具；<br>
+            	5、能运用div+css对网站进行切图；<br>
+            	6、设计感强，时尚感强，理解品牌设计和品质设计理念。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>平面设计师</u>（北京/上海）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	岗位职责：<br>
+            	1、公司品牌形象相关的创作、日常设计工作，比如视觉识别系统的修缮、线上线下广告、专题页面、甄选和修整图片、推广用物料的发掘和设计，等等；<br>
+            	2、以及可能需要支援的其他美术类工作；<br>
+            	3、鼓励主动尝试其他领域的工作。<br><br>
+            	任职要求：<br>
+            	1、工作经验要有，无所谓几年，关键看悟性；<br>
+            	2、请务必附上自己满意的作品，我们看图说话；<br>
+            	3、明白作为设计师，自己的价值所在，习惯性的把工作当自己的作品看待——精益求精；<br>
+            	4、性格和眼界。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>美术指导</u>（上海）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	岗位职责：<br>
+            	1、独立且高质量的完成设计方案，独立操作设计项目的各个环节；<br>
+            	2、按时按需完成设计任务；<br>
+            	3、协助监督设计师完成设计任务，对设计成果负责；<br>
+            	4、通过日常工作指导，提高所带小组的创意/设计水平，提高团队的效率与创新力；<br>
+            	5、跟进管理设计物料制作、打样、质量等工作。<br><br>
+            	任职要求：<br>
+            	1、具有独立的创意思考能力、独立的审美判断力、深厚的美术功底和优异的设计表达能力（有手绘与插画能力者优先）；<br>
+            	2、3年以上经验，有成功案例作品；<br>
+            	3、熟悉各种专业设计软件（Photoshop、Illustrator等）及设计制作技巧，有丰富的形象思维和独特的设计风格；<br>
+            	5、优秀的沟通协调能力和责任感；<br>
+            	6、有创作欲望，能承受较强的工作压力；<br>
+            	7、有带团队经验者优先。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>流量推广主管</u>（上海）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	岗位职责：<br>
+            	1、负责网站、APP产品的流量整合及运营工作，包括但不限于各种内、外部的资源合作运营，制定运营计划，跟踪运营活动的落体及推广效果等；<br>
+            	2、对内负责各行业线的资源整合、并与内容运营及营销策划配合，为充分开拓流量及外部合作奠定扎实的基础；<br>
+            	3、对外吸纳整合流量资源，包括但不限于百度、360、UCweb等渠道市场，以及与各主流商场、品牌方等资源方合作；<br>
+            	4、寻找各类DPS、RTB、网盟、网站、数据库等公司达成流量运营合作；<br>
+            	5、基于公司业务模型,制定流量运营目标与推广策略；<br>
+            	6、针对各渠道流量完成情况跟踪、评估，并提供数据支持、分析结果及报告。<br><br>
+            	岗位要求：<br>
+            	1、具备三年以上工作经验，有流量运营、BD工作经验尤佳；<br>
+            	2、主动沟通，善于换位思考，能有效整合资源，促成双赢合作；<br>
+            	3、敏锐洞察力、学习力强，掌握行业知识，了解行业动态；<br>
+            	4、有搜索运营、营销策划经验，人脉、资源渠道优先考虑。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>PR</u>（上海）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	岗位职责：<br>
+            	1、通过采取多种媒体渠道，组织不同的传播内容，正面传播公司的形象及相关的运营活动，提升公司品牌知名度；对外传播稿件内容的撰写、审核、修改、回收、整理等；<br>
+            	2、协助完成平台的发展规划，整理传播节奏，促进公司以及APP知名度提高和推广目标的达成；<br>
+            	3、根据业务发展需求，定期策划组织与媒体间的各种公关活动；<br>
+            	4、执行公司的公关计划，提升公司的社会形象，向外部公众宣传解释公司的有关情况；<br>
+            	5、建立危机公关预案，一旦出现危机事件后，能有效应对，最大限度地消除负面影响。<br><br>
+            	岗位要求：<br>
+            	1、大学本科或以上学历，公关、广告、商业、新闻、市场营销、计算机等相关专业毕业；<br>
+            	2、2年或以上PR以及市场销方面工作经验，熟悉品牌策划推广，具有广泛的媒体资源、人脉资源，具备公关特质，有互联网电商从业背景择优；<br>
+            	3、熟悉公关活动流程及PR运作流程，具有优秀的公关活动项目策划及执行与拓展能力，优秀的文笔功底；<br>
+            	4、富有激情和创意，具备良好的新闻撰写、广告策划及事件炒作策划能力；<br>
+            	5、较高的职业素养、敬业精神及团队精神，擅于沟通。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>策划</u>（上海）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	岗位职责：<br>
+            	1、负责公司品牌传播推广工作，运用有效可执行的构思，有目标的、可执行的创意制定推广目标，使用载体并对推广效果负责；<br>
+            	2、结合产品、用户需求、节日、热点事件等，参与策划相关营销事件或品牌主题活动；<br>
+            	3、以互联网媒体为平台，撰写双微及社会化传播所需各种文案，包括新闻稿，论坛帖、微信、微博推广等；<br>
+            	4、负责自媒体内容策划、话题引导，增强用户互动，提升网站整体人气。<br><br>
+            	岗位要求：<br>
+            	1、2年以上专业广告公司或互联网及快消文案工作经历，有自媒体微博微信运营经验。熟知并具有社交媒体运维经验，懂得大众笑点；<br>
+            	2、思维活跃敏捷，兴趣广泛，性格开朗、工作踏实、有进取心，能适应较强的工作压力；<br>
+            	3、具有创意构思和创意策略撰写能力，对创意有独特见解；能与创意团队讨论并形成共识；<br>
+            	4、网感好、善于沟通、社交媒体资深用户、有趣，有一定的审美水平，文风灵活多变；<br>
+            	5、诚实靠谱，有责任心和团队合作精神。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>平面设计</u>（上海）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	岗位职责：<br>
+            	1、根据部门需求完成产品（pc端页面并根据pc页面修改web端页面）相关的用户界面视觉设计；<br>
+            	2、完成产品相关推广活动的专题页面、活动页、banner、H5等需求；<br>
+            	3，完成线下推广需要的海报，易拉宝，宣传单的设计；<br>
+            	4、与各部门充分沟通协作，确认可控的误差范围和视觉效果的最终实现。<br><br>
+            	岗位要求：<br>
+            	1、从事设计行业工作3年以上；<br>
+            	2、美术、平面设计或其它艺术相关专业，大学专科及以上学历；<br>
+            	3、有扎实的美术功底、喜欢创意和良好的理解能力,能从用户体验的角度出发提出最佳的界面设计方案，并独立转化成设计稿；能做到视觉效果和业务需求内在统一，能够使商业创意准确呈现；<br>
+            	4、能时刻关注产品整体风格并适配产品需求；<br>
+            	5、熟练使用photoshop、Illustrator等图片处理、设计软件；<br>
+            	6、工作踏实认真，高度的工作责任心，具备良好的沟通能力及团队合作精神，认真细致，能吃苦耐劳，能够承受工作压力；<br>
+            	7、请附上个人设计作品。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>数字营销</u>（上海）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;"> 
+             	岗位职责：<br>
+            	1、了解互联网广告投放DSP，及百度网盟，根据安排，负责公司整体网站的DSP持续优化工作；<br>
+            	2、负责公司广告主DSP广告投放的优化工作，把控投放节奏；<br>
+            	3、对投放数据进行分析，并提供优化策略，使广告投放效果达到最大化；<br>
+            	4、对投放平台和媒体进行充分了解，善于充分利用资源。<br><br>
+            	岗位要求：<br>
+            	1、2年以上搜索引擎营销及DSP投放经验；<br>
+            	2、有DSP SEM SEO等互联网产品账户优化经验者优先；<br>
+            	3、熟练使用WORD,EXCEL，PPT等办公软件，具备基本的网络知识，并具备数据分析能力。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>文案</u>（上海）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	岗位职责：<br>
+            	1、有很好的文字驾驭能力和写作功底；<br>
+            	2、熟悉社会化媒体营销，了解网络热点；<br>
+            	3、能够按照项目规定的时间完成相应的文案内容；<br>
+            	4、能够指导其他组员按照客户要求完成相关文案内容撰写；<br>
+            	5、2年以上互联网行业文案撰写经验，能独立撰写公关稿件者优先。<br><br>
+            	岗位要求：<br>
+            	1、广告学、新闻学、传播学等专业优先；<br>
+            	2、有策划能力和创意能力的优先；<br>
+            	3、熟练并会使用office 软件，具备基本的网络知识；<br>
+            	4、富有责任心、具有团队精神。具备良好的学习能力，执行力强，抗压能力强；<br>
+            	5、2年以上文案编辑工作经验。<br><br>
+             </p>
+         </div>
+         <div class="contentDivv">
+             <p class="jiaecon-p8 contentpp1"><u>总裁助理</u>（上海）</p>
+             <p class="jiaecon-p8 contentpp2" style="display:none;">
+             	岗位职责：<br>
+            	1、协助总裁制定公司发展战略规划、年度经营计划、年度工作计划及各阶段工作目标分解；<br>
+            	2、跟踪公司经营目标达成情况，提供分析意见及改进建议；<br>
+            	3、在公司经营计划、销售策略、资本运作等方面向总裁提供相关解决方案；<br>
+            	4、起草公司各阶段工作总结、对外新闻发言稿及其他正式文件；<br>
+            	5、参与公司重大业务的决策和谈判等会议，处理重大突发事件；<br>
+            	6、撰写和跟进落实公司总裁会议、专题研讨会议等公司会议纪要；<br>
+            	7、协助总裁对公司各业务部门进行管理、协调内部各部门关系，尤其是业务部门间的日常工作关系以及事务处理，必要时可单独召集业务沟通会议或工作会议；<br>
+            	8、协助总裁处理外部政府公共关系，公司合作伙伴关系维护等；<br>
+            	9、协助总裁开展客户外联公关，以及业务往来信息的收集反馈，及时传达至各部门处理；<br>
+            	10、准确解读总裁的指令，及时回馈各部门，并随时观注市场信息、政府政策、行业最新信息反馈给总裁；<br>
+            	11、完成其他临时交办的任务。<br><br>
+            	任职要求：<br>
+            	1、本科以上学历，男女不限，30-岁45岁，六年以上相关工作经验；<br>
+            	2、受过战略管理、组织变革管理、项目管理、管理能力开发等方面的培训；<br>
+            	3、熟练运用office办公软件，有良好的公文写作能力及外交能力，熟悉企业的运营管理；<br>
+            	4、具有较高的综合素质，能够迅速掌握与公司业务有关的各种知识；<br>
+            	5、有较强的组织、协调、沟通、领导能力及出色的人际交往和社会活动能力以及敏锐的洞察力；<br>
+            	6、具有很强的判断与决策能力，计划和执行能力；有大中型知名互联网企业工作经验。
+             </p>
+         </div>
+         <p class="jiaecon-p2">在加意，我们崇尚平等、创新、快速的互联网文化，如果你热爱创意，憧憬让美好事情发生，请将您的简历发送到招聘邮箱：jobs@jiae.com 我们会及时和您联系。</p>
+    </div>
+   <script src="../../assets/js/jquery.min.js"></script>
+   <script src="../../assets/js/amazeui.min.js"></script>
+   <script src="../../assets/js/jquery.touch.js" type="text/javascript" charset="utf-8"></script>
+   <script src="../../assets/js/main.js"></script>
+</body>
+<script type="text/javascript">
+	var idget=location.search.split("=")[1];
+$(".link").attr("href","../presonalcenter.html?user="+idget);
+	$(".contentDivv").children(".contentpp1").click(function () {
+		var x=$(this).parent().index()-2;
+		numchange=x;
+		$(".contentDivv").eq(x).children(".contentpp1").addClass("fontred");
+		$(".contentDivv").eq(x).siblings(".contentDivv").children(".contentpp1").removeClass("fontred");
+		if (numchange!=dis) {
+			$(".contentDivv").eq(x).children(".contentpp2").addClass("noneshow");
+			$(".contentDivv").eq(x).siblings(".contentDivv").children(".contentpp2").removeClass("noneshow");
+		}else{
+			$(".contentDivv").eq(x).children(".contentpp2").toggleClass("noneshow");
+		}
+		dis=x;
+	});
+	var numchange=0,dis=0;
+	$(".contentDivv").children(".contentpp1" ).eq(0).trigger('click');
+</script>
+</html>

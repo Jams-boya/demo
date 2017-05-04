@@ -1,0 +1,14 @@
+#doc     各类型文档
+#public  静态资源
+##----assets    (JS,CSS,Image文件)
+##----views     HTML文件
+##----index.html    首页
+#server  服务端代码
+##----controller        控制器
+##----model             模型
+##----service           业务层
+##test                测试代码
+##utils                工具类(数据库和加密库)
+#SQL     数据库SQL文件
+#tools    工具
+#app.js  入口文件

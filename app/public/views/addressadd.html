@@ -1,0 +1,364 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="加意新品(jiae.com)是一种创意的生活方式，让每个人享受设计的乐趣，每天加一点创意。 对于消费者，你可以抢鲜购买到原创的设计精品，也可以找到设计师为你提供专属的创意设计服务。 对于设计师，你可以免费发布设计新品和设计服务，帮助你自由实现设计梦想。">
+    <meta name="keywords" content="创意电商、新品电商、创意产品、创意家居、创意设计、创意礼物、创意生活、设计师、极客">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <title>加意新品</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="shortcut icon" href="../assets/i/favicon.ico">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="../assets/i/app-icon72x72@2x.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="../assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="../assets/css/center.css">
+    <link rel="stylesheet" href="../assets/css/public.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+</head>
+
+<body style="background-color: white;" class="am-with-fixed-header  am-with-fixed-navbar">
+    <div ng-view id="myAPP"></div>
+    <!--底部-->
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+        <ul id="container" class="am-navbar-nav am-cf am-avg-sm-4" style="background-color:#fff;" id="J-footer-menu">
+            <li>
+                <a href="index.html" class="" id="home">
+                    <span id="homeIcon" class="am-icon-home footerTitleMiao headIcon"></span>
+                    <span id="homeTitle" class="am-navbar-label footerTitleFont headTitle">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="catalog.html" class="" id="typelist">
+                    <span id="typelistIcon" class="am-icon-bars footerTitleMiao headIcon"></span>
+                    <span id="typelistTitle" class="am-navbar-label footerTitleFont headTitle">分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="shopcar.html" class="" id="cart">
+                    <span id="cartIcon" class="am-icon-shopping-cart footerTitleMiao headIcon" style="position:relative;">
+                  <span class="am-badge am-badge-danger am-round" id="J-cart-num" 
+                  style="position: absolute;top: -.2rem;left: .8rem;color: #fff;border-radius: 1000px;-webkit-text-fill-color: #fff;-webkit-text-stroke-color: #fff;font-weight: 300;display:none;">
+                  0</span>
+                    </span>
+                    <span id="cartTitle" class="am-navbar-label footerTitleFont headTitle">购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="login.html" id="login">
+                    <!-- <a id="J-hd-btn-login" href="login"> -->
+                    <span id="loginIcon" class="am-icon-user footerTitleMiao headIcon"></span>
+                    <span id="loginTitle" class="am-navbar-label footerTitleFont headTitle">登录</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--在这里编写你的代码-->
+    <!--头部开始-->
+    <style type="text/css">
+    	.link{
+    		display: block;
+    	}
+    </style>
+    <header data-am-widget="header" class="am-header am-header-fixed  am-header-default am-no-layout">
+    	<div class="am-header-left am-header-nav">
+    		<a href="javascript:window.history.back();" class>
+    			<img class="am-header-icon-custom" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMiAyMCI+PHBhdGggZD0iTTEwLDBsMiwybC04LDhsOCw4bC0yLDJMMCwxMEwxMCwweiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg=="/>
+    		</a>
+    	</div>
+    	<h1 class="am-header-title">
+    		<a href="#" class="pagename">地址编辑</a>
+    	</h1>
+    	<div class="am-header-right am-header-nav">
+    		<a href="javascript:;" class="link">
+    			<i class="am-header-icon am-icon-save " id="save"></i>
+    		</a>
+    	</div>
+    </header>
+    <!--头部结束-->
+    <style type="text/css">
+    	#address-form{
+    		display: block;
+    		margin-top:2rem;
+    	}
+    	.form-group{
+    		margin: 1rem;
+    	}
+    	.addresseeinfo {
+		    font-size: 1.3rem;
+		    color: #999;
+		}
+		#addressee {
+		    line-height: 1.5;
+		    margin-bottom: .3rem;
+		    font-size: 1.5rem;
+		    padding-left: .4rem;
+		}
+		.form-control {
+		    width: 100%;
+		    padding-bottom: .4rem;
+		    border: 1px solid #ccc;
+		    outline: none;
+		}
+		.row {
+		    margin: 1.5rem 0;
+		    font-size: 1.3rem;
+		}
+		.focus{
+			border: 1px solid red;
+		}
+    </style>
+    <!--地址增加的表单（感觉没用）-->
+	<form id="address-form" action="javascript:;" method="post"> 
+		<!--表单里套了一个div，设置边距（感觉可以在form表单上写）-->
+		<div class="form-group">
+			<input name="isCarting" type="hidden" value="">
+			<input name="addressId" type="hidden" value="0">
+			<span class="addresseeinfo">收件人姓名</span><br />
+			<!--收件人姓名框-->
+			<input name="consignee" type="text" class="form-control" id="addressee" placeholder="" value=""><br />
+			<span class="addresseeinfo">手机号码</span><br />
+			<!--手机号码框-->
+			<input name="mobilePhone" type="tel" class="form-control" id="phonenumber" placeholder="" value=""><br />
+			<input name="productItemId" type="hidden" value="" id="J-productItemId">
+    		<input name="quantity" type="hidden" value="" id="J-quantity">
+			<!--选择地区的部分-->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-10 col-xs-offset-1" style="padding: 5px 0;">
+						<!--省份的下拉菜单-->
+						<select name="state" id="state" class="form-control" style="height: 30px;width: 60%">
+							<option value="0">省份/自治州</option> 
+						</select>
+					</div>
+					<!--城市的下拉菜单-->
+					<div class="col-xs-10 col-xs-offset-1" style="padding: 5px 0;">
+						<select name="city" id="city" class="form-control " style="height: 30px; width: 60%">
+							<option value="0">城市/地区</option>
+						</select>
+					</div>
+					<!--地区的下拉菜单-->
+					<div class="col-xs-10 col-xs-offset-1" style="padding: 5px 0;">
+						<select name="districtCode" id="country" class="form-control " style="height: 30px;width: 60%">
+							<option value="0">区/县</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<!--详细的街道地址-->
+			<span class="addresseeinfo">街道地址</span>		<br />
+			<textarea name="address" id="street" style="font-size:1.5rem; padding-left: .4rem;" class="form-control" rows="2" placeholder=""></textarea><br />
+			<span class="addresseeinfo">邮编</span><br />
+			<!--邮编框（文本框内限制只能输入数字，并且最大是6位）-->
+			<input name="postCode" id="postcode" style="font-size:1.5rem; padding-left: .4rem;" type="tel" class="form-control" placeholder="" value="" maxlength="6" onkeyup="this.value=this.value.replace(/\D/gi,&quot;&quot;)"><br />
+			<button id="am-address-btn" style="margin-top:26px; height:30px; width:100%; border:0; background:#e25a5b; color:#fff; margin-bottom:50px;">保存</button>
+		</div>
+	</form>
+	<!--遮罩层-->
+	<!--单个修改文字行高-->
+	<style type="text/css">
+		.shadow .message-center{
+			line-height: 5rem !important;
+		}
+	</style>
+   <div class="shadow">
+   	<!--提示框-->
+   	  <div class="message">
+   	  	<div class="message-top">
+   	  		消息
+   	  	</div>
+   	  	<div class="message-center">
+   	  	</div>
+   	  	<div class="message-bottom">
+   	  		<span class="am-modal-btn">确定</span>
+   	  	</div>
+   	  </div>
+   </div>
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/amazeui.min.js"></script>
+   <script src="../assets/js/jquery.touch.js" type="text/javascript" charset="utf-8"></script>
+   <script src="../assets/js/main.js"></script>
+   	<script src="../assets/js/jquery.area.js" type="text/javascript" charset="utf-8"></script>
+</body>
+<script type="text/javascript">
+
+//	焦点事件
+	$(".form-control").on("focus",function () {
+		$(this).addClass("focus");
+	});
+	$(".form-control").on("blur",function () {
+		$(this).removeClass("focus");
+	});
+//	遮罩层显示及表单验证
+	$(".shadow").height($(document).height());
+	$("#am-address-btn,#save").on('tap',function () {
+//		收货人姓名的非空验证,外加弹框内容
+		if (!$("#addressee").val()) {
+			$(".shadow>.message>.message-center").text("请填写收货人姓名");
+			showshadow();
+			return;
+		}
+//		手机号的验证
+		var reg1=/^1\d{10}$/;
+		if (!reg1.test($("#phonenumber").val())) {
+			$(".shadow>.message>.message-center").text("您输入的手机号有误");
+			showshadow();
+			return;
+		}
+//		地址信息的完整性验证
+		if ($("#state").val()==0||$("#city").val()==0||$("#country").val()==0|| !$("#street").val()) {
+			$(".shadow>.message>.message-center").text("请将地址信息填写完整");
+			showshadow();
+			return;
+		}
+//		邮编的六位数验证
+		var reg2=/^\d{6}$/;
+		if (!reg2.test($("#postcode").val())) {
+			$(".shadow>.message>.message-center").text("请填写正确的邮政编码");
+			showshadow();
+			return;
+		}
+//		判断是否是由添加按钮跳入此页面
+		if (addMessage[0]=="?user") {
+//				由添加按钮进入此页面
+//				所有输入的内容正确后增加地址数据
+				$.post("/addresssAdd",{
+				username:$("#addressee").val(),
+				phonenum:$("#phonenumber").val(),
+				province:province[$("#state").val()-1],
+				city:city[$("#state").val()-1][$("#city").val()-1],
+				country:district[$("#state").val()-1][$("#city").val()-1][$("#country").val()-1],
+				street:$("#street").val(),
+				postcode:$("#postcode").val(),
+				userId:addMessage[1],
+				myDefault:0
+			},function (result) {
+				if (result=="success") {
+//					增加成功后将原有内容清空
+					$("#addressee").val("");
+					$("#phonenumber").val("");
+					$("#state").val("0");
+					$("#city").val("0");
+					$("#country").val("0");
+					$("#street").val("");
+					$("#postcode").val("");
+//					跳转到原地址页面,并传回用户id 
+					location.href="address.html?id="+addMessage[1];
+				}
+			})
+		}
+		if (addMessage[0]=="?change") {
+//			由编辑按钮进入此页面
+//				用确认后的数据修改对应id的数据
+				$.post("/addresssChage",{
+				username:$("#addressee").val(),
+				phonenum:$("#phonenumber").val(),
+				province:province[$("#state").val()-1],
+				city:city[$("#state").val()-1][$("#city").val()-1],
+				country:district[$("#state").val()-1][$("#city").val()-1][$("#country").val()-1],
+				street:$("#street").val(),
+				postcode:$("#postcode").val(),
+				addId:addMessage[1]
+			},function (result) {
+				if (result=="success") {
+//					成功后删除原内容
+					$("#addressee").val("");
+					$("#phonenumber").val("");
+					$("#state").val("0");
+					$("#city").val("0");
+					$("#country").val("0");
+					$("#street").val("");
+					$("#postcode").val("");
+//					跳转到原地址页面,并传回用户id
+					location.href="address.html?id="+addMessage[2];
+				}
+			})
+		}
+		
+	});
+//	遮罩层显示函数
+	function showshadow () {
+		$(".shadow").show();
+		$(".shadow>.message").addClass("big");
+	}
+//	弹框消失事件
+	$(".am-modal-btn").on("tap",function () {
+		$(".shadow>.message").removeClass("big");
+		$(".shadow>.message").addClass("small");
+		setTimeout(function () {
+			$(".shadow").hide();
+			$(".shadow>.message").removeClass("small");
+		},300);
+	});
+	//获取地址栏的对应信息
+	var addMessage=location.search.split("=");
+//	判断值的类型
+	if (addMessage[0]=="?change") {
+//		由编辑按钮进入本页面
+//		获取相应的地址信息并填入文本框中
+		$.post("/addressgetagain",{userId:addMessage[1]},function (result) {
+			$("#addressee").val(result[0].username);
+			$("#phonenumber").val(result[0].mobile);
+			
+			$("#state").val(province.indexOf(result[0].province)+1);
+			cityChange($("#state").val()-1);
+			$("#city").val(city[$("#state").val()-1].indexOf(result[0].city)+1);
+			countryChange($("#state").val()-1,$("#city").val()-1)
+			$("#country").val(district[$("#state").val()-1][$("#city").val()-1].indexOf(result[0].country)+1);
+			$("#street").val(result[0].area);
+			$("#postcode").val(result[0].postcode);
+		});
+	}
+//	城市联动
+	var oState=$("#state");
+	var oCity=$("#city"),cityval;
+	var oCountry=$("#country"),counval;
+//	省份初始化
+	for (var i in province) {
+		var pro=new Option(province[i],parseInt(i)+1);
+		oState.append(pro);
+	}
+//	省份框修改时城市框显示
+	oState.on("change",function () {
+		cityval=$(this).val()-1;
+		cityChange(cityval);
+	});
+//	城市选择函数
+	function cityChange(citycity) {
+		oCity[0].options.length=1;
+		oCountry[0].options.length=1;
+		var arr=city[citycity];
+		for (var i in arr) {
+			var cit= new Option(arr[i],parseInt(i)+1);
+			oCity.append(cit);
+		}
+	}
+//	城市修改时的事件
+	oCity.on("change",function () {
+		counval=$(this).val()-1;
+		countryChange(cityval,counval);
+	})
+//	地区改变函数
+	function countryChange(city2,councoun) {
+		oCountry[0].options.length=1;
+		var arr=district[city2][councoun];
+		for (var i in arr) {
+			var coun=new Option(arr[i],parseInt(i)+1)
+			oCountry.append(coun);
+		}
+	}
+	
+</script>
+</html>

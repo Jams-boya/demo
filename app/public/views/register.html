@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="加意新品(jiae.com)是一种创意的生活方式，让每个人享受设计的乐趣，每天加一点创意。 对于消费者，你可以抢鲜购买到原创的设计精品，也可以找到设计师为你提供专属的创意设计服务。 对于设计师，你可以免费发布设计新品和设计服务，帮助你自由实现设计梦想。">
+    <meta name="keywords" content="创意电商、新品电商、创意产品、创意家居、创意设计、创意礼物、创意生活、设计师、极客">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <title>加意新品</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="shortcut icon" href="../assets/i/favicon.ico">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="../assets/i/app-icon72x72@2x.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+    <!--<link rel="stylesheet" href="assets/css/app.css">-->
+    <link rel="stylesheet" href="../assets/css/public.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css" />-->
+</head>
+
+<body class="am-with-fixed-header am-with-fixed-navbar">
+    <div ng-view id="myAPP"></div>
+    <!--底部-->
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+        <ul id="container" class="am-navbar-nav am-cf am-avg-sm-4" style="background-color:#fff;" id="J-footer-menu">
+            <li>
+                <a href="index.html" class="" id="home">
+                    <span id="homeIcon" class="am-icon-home footerTitleMiao headIcon"></span>
+                    <span id="homeTitle" class="am-navbar-label footerTitleFont headTitle">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="catalog.html" class="" id="typelist">
+                    <span id="typelistIcon" class="am-icon-bars footerTitleMiao headIcon"></span>
+                    <span id="typelistTitle" class="am-navbar-label footerTitleFont headTitle">分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="shopcar.html" class="" id="cart">
+                    <span id="cartIcon" class="am-icon-shopping-cart footerTitleMiao headIcon" style="position:relative;">
+                  <span class="am-badge am-badge-danger am-round" id="J-cart-num" 
+                  style="position: absolute;top: -.2rem;left: .8rem;color: #fff;border-radius: 1000px;-webkit-text-fill-color: #fff;-webkit-text-stroke-color: #fff;font-weight: 300;display:none;">
+                  0</span>
+                    </span>
+                    <span id="cartTitle" class="am-navbar-label footerTitleFont headTitle">购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="#/login" id="login">
+                    <!-- <a id="J-hd-btn-login" href="login"> -->
+                    <span id="loginIcon" class="am-icon-user footerTitleMiao footerTitleMiaoActive headIcon"></span>
+                    <span id="loginTitle" class="am-navbar-label footerTitleFont footerTitleFontActive headTitle">登录</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--在这里编写你的代码-->
+    <div class="navbar navbar-jiae navbar-fixed-top">
+    	<!--注册界面的顶部信息-->
+        <header data-am-widget="header" class="am-header am-header-default am-header-fixed am-no-layout">
+            <div class="am-header-left am-header-nav">
+                <a href="javascript:window.history.back()" class>
+                    <img class="am-header-icon-custom" src='data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 20"><path d="M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z" fill="%23fff"/></svg>'/>
+                </a>
+            </div>
+            <h1 class="am-header-title">
+                <a href="#" class>注册</a>
+            </h1>
+            <div class="am-header-right am-header-nav">
+                <a href="login.html" class="j-register">登录</a>
+            </div>
+        </header>
+        <!--注册界面样式-->
+        <style>
+            .form-input{
+                width:100%;
+                margin-bottom:5%;
+            }
+            .form-pwd{
+                position:relative;
+                margin-top:2%;
+                float:left;
+            }
+            .form-img{
+                position:relative;
+                margin-top:2%;
+                float:left !important;
+            }
+            .j-form-rows-agreement{
+                height:20px;
+                line-height:20px;
+                font-size:12px;
+            }
+            .fast-login{
+                margin-top:2rem;
+            }
+            .fast-login .desc{
+                font-size:1.2rem;
+                text-align:center;
+                margin-bottom:2px !important;
+            }
+            .login-lists{
+                text-align:center;
+            }
+            .am-icon-qq:before{
+                padding-top:12px;
+            }
+            .am-form-group{
+                overflow:hidden;
+                margin-bottom:0;
+            }
+            .form-img{
+                margin-top:.5% !important;
+            }
+        </style>
+        <div class="j-bg-line"></div>
+        <div class="content content-account">
+            <div class="mod-forms mod-forms-account mod-forms-account-signup">
+            	<!--注册信息的编辑-->
+                <form action="." method="post" class="form-signup form-horizontal" style="overflow:hidden;margin-top:1.5rem">
+                    <!--用户账号的输入-->
+                    <div class="am-form-group">
+                        <div class="am-u-sm-offset-1 am-u-sm-10 j-form-rows-username">
+                            <input type="text" class="form-input form-control j-username j-email-or-mobile am-form-field" placeholder="请输入手机或邮箱" name="account"/>
+                        </div>
+                    </div>
+                   <!--用户密码的输入-->
+                   <div class="am-form-group">
+                        <div class="am-u-sm-offset-1 am-u-sm-10 j-form-rows-pwd1">
+                            <input type="password" class="form-input form-control j-password1 am-form-field" placeholder="请输入密码" name="password1"/>
+                        </div>
+                    </div>
+                    <!--密码的再次确认-->
+                    <div class="am-form-group">
+                        <div class="am-u-sm-offset-1 am-u-sm-10 j-form-rows-pwd2">
+                            <input type="password" class="form-input form-control j-password2 am-form-field" placeholder="请再次输入密码" name="password2"/>
+                        </div>
+                    </div>
+                    <!--图片验证码-->
+                    <style>
+                    	#captcha_div img{
+                    		vertical-align:-5px;
+                    	}
+                    </style>
+                    <div style="text-align:center;" id="captcha_div"></div>
+                    <!--当用户账号是手机号时，验证码的获取-->
+                    <div id="yan" class="am-form-group am-form-inline j-form-rows-verifycode-mobile" style="display:none">
+                        <div class="am-u-sm-offset-1 am-u-sm-5 j-form-rows-verifycode" style="clear:both">
+                            <input type="text" class="form-input form-control j-verifycode-mobile am-form-field" placeholder="请输入手机验证码" mame="mobileVerifycode" id="mobile"/>
+                        </div>
+                        <div class="am-u-sm-5 form-img">
+                            <a class="j-getMobileCode" href="javascript:;" data-id="0" action="signup" id="sendBtn">发送手机验证码</a>
+                        </div>
+                    </div>
+                    <div class="am-form-group">
+                        <div class="am-u-sm-offset-1 am-u-sm-10 j-form-rows-agreement" style="margin-bottom:2%" name="check_aggreement">
+                            <lable class="fl">
+                                <input type="checkbox" class="checkbox fl j-agreement" checked="checked" name="check_aggreement"/>
+                                <span class="checkbox-t fl">阅读并同意</span>
+                            </lable>
+                            <a class="checkbox-t-link fl" href="javascript:;" target="_blank">《加意用户注册协议》</a>
+                        </div>
+                    </div>
+                    <!--信息完整后，进行注册-->
+                    <div class="am-form-group">
+                        <div class="am-u-sm-offset-1 am-u-sm-10">
+                            <!--<a id="zhuce" class="form-input am-u-sm-12 am-btn am-btn-primary btn-submit form-control" href="javascript:;">立即注册</a>-->
+                            <input type="button" id="zhuce" class="form-input am-u-sm-12 am-btn am-btn-primary btn-submit form-control" value="立即注册" disabled="disabled"/>
+                        </div>
+                    </div>
+                </form>
+                <div class="am-form-group fast-login am-u-sm-offset-1 am-u-sm-10">
+                    <p class="desc">使用其他账号登录</p>
+                    <div class="login-lists">
+                        <a class="btn btn-qq am-icon-btn am-primary am-icon-qq" href="oauth2/getQQAuthorizeURL"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--消息弹框-->
+        <div class="am-modal am-modal-alert" tabindex="-1" id="jiae-alert" style="display:none;margin-top:-66px;">
+        	<div class="am-modal-dialog">
+        		<div class="am-modal-hd">消息</div>
+        		<div class="am-modal-bd" id="alertMsg">账号不能为空</div>
+        		<div class="am-modal-footer">
+        			<span class="am-modal-btn" id="que">确定</span>
+        		</div>
+        	</div>
+        </div>
+        <!--遮罩层-->
+        <div id="mask" class="am-dimmer" data-am-dimmer style="display:none"></div>
+    </div>
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/amazeui.min.js"></script>
+   <script src="../assets/js/main.js"></script>
+   <script src="http://c.dun.163yun.com/js/c.js"></script>
+   <script>
+       var $txt=$("input[name='account']");
+       var $pwd1=$('input[name="password1"]');
+       var $pwd2=$('input[name="password2"]');
+       var $que=$('#que');
+       var $div=$('#yan');
+       var $tan=$('#jiae-alert'),$kua=$('#alertMsg');
+       var $mask=$('#mask');
+       var $zhu=$('#zhuce');
+       var reg_mob=/^\d{11}$/,reg_emi=/^\d+@\w+/;
+       var reg_pwd1=/^\d{6,}$/;
+       /*判断用户账号是否是手机号,并随之进行验证码界面的显示和隐藏*/
+       $txt.blur(function(){
+            if(reg_mob.test($(this).val()) && !reg_emi.test($(this).val())){
+                $div.css('display','block');
+            }else{
+                $div.css('display','none');
+            };
+       });
+       /*密码的表单验证,以及对应的弹框和遮罩层*/
+       $pwd1.blur(function(){
+       		if(!reg_pwd1.test($(this).val())){
+       			$tan.addClass('am-modal-active').css('display','block');
+       			$kua.text('密码太短');
+       			$mask.addClass('am-active').css('display','block');
+       		};
+       });
+       $que.click(function(){
+       		$tan.removeClass('am-modal-active').css('display','none');
+       		$mask.removeClass('am-active').css('display','none');
+       		
+       });
+       $mask.click(function(){
+       		$tan.removeClass('am-modal-active').css('display','none');
+       		$mask.removeClass('am-active').css('display','none');
+       		
+       });
+       /*注册时的统一验证,并进行相应的弹框*/
+       $zhu.click(function(){
+       		if($txt.val() == ''){
+       			$tan.addClass('am-modal-active').css('display','block');
+       			$kua.text('账号不能为空');
+       			$mask.addClass('am-active').css('display','block');
+       			return;
+       		}else if(!(reg_mob.test($txt.val()) || reg_emi.test($txt.val()))){
+       			$tan.addClass('am-modal-active').css('display','block');
+       			$kua.text('非法用户名');
+       			$mask.addClass('am-active').css('display','block');
+       			return;
+       		}else if($pwd1.val() == ''){
+       			$tan.addClass('am-modal-active').css('display','block');
+       			$kua.text('密码不能为空');
+       			$mask.addClass('am-active').css('display','block');
+       			return;
+       		}else if(!reg_pwd1.test($pwd1.val())){
+       			$tan.addClass('am-modal-active').css('display','block');
+       			$kua.text('密码太短');
+       			$mask.addClass('am-active').css('display','block');
+       			return;
+       		}else if($pwd1.val() != $pwd2.val()){
+       			$tan.addClass('am-modal-active').css('display','block');
+       			$kua.text('两次密码不一致');
+       			$mask.addClass('am-active').css('display','block');
+       			return;
+       		}else if(code!=$("#mobile").val()){
+            	$tan.addClass('am-modal-active').css('display','block');
+       			$kua.text('验证码不正确');
+       			$mask.addClass('am-active').css('display','block');
+       			return;
+	        };
+	        /*验证成功后,将用户信息录入数据库*/
+	        $.post("/register",{
+	            user:$txt.val(),
+	            pass:$pwd1.val()
+	        },function(result){
+	           if(result=="failure"){
+	               alert("系统繁忙，请稍后再试");
+	           }else{
+	               location.assign("login.html");
+	           }
+	        });
+       });
+      /*手机验证码的验证和获取*/
+       $("#mobile").blur(function(){
+	        if(code!=$(this).val()){
+            	$tan.addClass('am-modal-active').css('display','block');
+       			$kua.text('验证码不正确');
+       			$mask.addClass('am-active').css('display','block');
+	        }
+       });
+       var code;
+       $("#sendBtn").click(function(){
+	        $.post("/sms",{account:$txt.val()},function(result){
+	            code=result;
+	        });
+       });
+       var w=$(window).width(),sw;
+       sw=w*0.76;
+       var opts = {
+	        "element": "captcha_div",
+	        "captchaId": "21d8a843db134a51bca2b0b5602e8d6b",
+	        "width": parseInt(sw),
+	        "mode":"float",
+	        "verifyCallback": function(ret){
+		        if(ret['value']){
+		        	$("#zhuce").removeAttr("disabled"); 
+		        }else{
+			      	$tan.addClass('am-modal-active').css('display','block');
+			   		$kua.text('图形验证不正确');
+			   		$mask.addClass('am-active').css('display','block');
+		        }
+	        }
+        }
+       new NECaptcha(opts);
+       window.onresize=function(){
+	      	w=$(window).width(),sw;
+	      	sw=w*0.76;
+	      	opts.width=parseInt(sw);
+	      	$('.ncpt_widget').remove();
+	      	new NECaptcha(opts);
+       };
+   </script>
+</body>
+</html>
